@@ -374,80 +374,91 @@ const ramayanaData = {
 "Sargas": "1 to 1",
 "Total_Sargas": 1,
 "bgImage": "bg/Conquering Obstacles.png",
-"audio_files": ["audio/1/sunderkand_part_1a.wav","audio/1/sunderkand_part_1b.wav"] // Assuming this new format
+"audio_files": ["audio/sundara_kanda_1_1.wav"] // Assuming this new format
 },
 "Part 2": {
 "Title": "The Radiant Realm of Ravana's Residence",
 "Sargas": "2 to 8",
 "Total_Sargas": 7,
 "bgImage": "bg/The Radiant Realm of Ravana's Residence.png",
-"audio_files": ["audio/2/part_2a.mp3"]
+"audio_files": ["audio/sundara_kanda_2_1.wav"]
 },
 "Part 3": {
 "Title": "Despondency and Renewed Resolve",
 "Sargas": "9 to 12",
 "Total_Sargas": 4,
-"bgImage": "bg/Despondency and Renewed Resolve.png"
+"bgImage": "bg/Despondency and Renewed Resolve.png",
+"audio_files": ["audio/sundara_kanda_3_1.wav"]
 },
 "Part 4": {
 "Title": "Despair and Devotion",
 "Sargas": "13 to 17",
 "Total_Sargas": 5,
-"bgImage": "bg/Despair and Devotion.png"
+"bgImage": "bg/Despair and Devotion.png",
+"audio_files": ["audio/sundara_kanda_4_1.wav"]
 },
 "Part 5": {
 "Title": "The Ogresses' Menace",
 "Sargas": "18 to 24",
 "Total_Sargas": 7,
-"bgImage": "bg/The Ogresses' Menace.png"
+"bgImage": "bg/The Ogresses' Menace.png",
+"audio_files": ["audio/sundara_kanda_5_1.wav"]
 },
 "Part 6": {
 "Title": "The Messenger of Hope: Hanuman's Encounter with Sita",
 "Sargas": "25 to 32",
 "Total_Sargas": 8,
-"bgImage": "bg/The Messenger of Hope Hanuman's Encounter with Sita.png"
+"bgImage": "bg/The Messenger of Hope Hanuman's Encounter with Sita.png",
+"audio_files": ["audio/sundara_kanda_6_1.wav"]
 },
 "Part 7": {
 "Title": "Rama's Unwavering Love and Sita's Hope",
 "Sargas": "33 to 36",
 "Total_Sargas": 4,
-"bgImage": "bg/Rama's Unwavering Love and Sita's Hope.png"
+"bgImage": "bg/Rama's Unwavering Love and Sita's Hope.png",
+"audio_files": ["audio/sundara_kanda_7_1.wav"]
 },
 "Part 8": {
 "Title": "The Warrior's Resolve: Confronting Fear and Destruction",
 "Sargas": "37 to 41",
 "Total_Sargas": 5,
-"bgImage": "bg/The Warrior's Resolve Confronting Fear and Destruction.png"
+"bgImage": "bg/The Warrior's Resolve Confronting Fear and Destruction.png",
+"audio_files": ["audio/sundara_kanda_8_1.wav"]
 },
 "Part 9": {
 "Title": "The Battle of Wits and Strength",
 "Sargas": "42 to 48",
 "Total_Sargas": 7,
-"bgImage": "bg/The Battle of Wits and Strength.png"
+"bgImage": "bg/The Battle of Wits and Strength.png",
+"audio_files": ["audio/sundara_kanda_9_1.wav"]
 },
 "Part 10": {
 "Title": "The Fiery Guardian of Virtue",
 "Sargas": "49 to 55",
 "Total_Sargas": 7,
-"bgImage": "bg/The Fiery Guardian of Virtue.png"
+"bgImage": "bg/The Fiery Guardian of Virtue.png",
+"audio_files": ["audio/sundara_kanda_10_1.wav"]
 },
 "Part 11": {
 "Title": "Hanuman's Oceanic Leap",
 "Sargas": "56 to 57",
 "Total_Sargas": 2,
-"bgImage": "bg/Hanuman's Oceanic Leap.png"
+"bgImage": "bg/Hanuman's Oceanic Leap.png",
+"audio_files": ["audio/sundara_kanda_11_1.wav"]
 },
 "Part 12": {
 "Title": "The March to Victory: Hanuman's Quest and the Vanaras' Antics",
 "Sargas": "58 to 61",
 "Total_Sargas": 4,
-"bgImage": "bg/The March to Victory Hanuman's Quest and the Vanaras' Antics.png"
+"bgImage": "bg/The March to Victory Hanuman's Quest and the Vanaras' Antics.png",
+"audio_files": ["audio/sundara_kanda_12_1.wav"]
 },
 "Part 13": {
 "Title": "Rama's Tears and Hanuman's Words",
 "Sargas": "62 to 68",
 "Total_Sargas": 7,
-"bgImage": "bg/Rama's Tears and Hanuman's Words.png"
+"bgImage": "bg/Rama's Tears and Hanuman's Words.png",
+"audio_files": ["audio/sundara_kanda_13_1.wav"]
 }
 
 }
@@ -552,7 +563,7 @@ body.style.backgroundImage = `url("${partData.bgImage}")`;
 
 let formattedStory = "An error occurred while loading the story.";
 try {
-const response = await fetch(`sunderkand_part_${partKey.replace('Part ', '')}.json`);
+const response = await fetch(`json/sunderkand_part_${partKey.replace('Part ', '')}.json`);
 if (!response.ok) {
 throw new Error(`HTTP error! status: ${response.status}`);
 }
@@ -928,7 +939,7 @@ const sendMessage = async () => {
   chatMessages.scrollTop = chatMessages.scrollHeight;
 
   // Define the API endpoint for your Python backend
-  const API_ENDPOINT = 'http://localhost:5000/chat';
+  const API_ENDPOINT = 'http://10.57.1.52:5000/chat';
 
   try {
       const response = await fetch(API_ENDPOINT, {
