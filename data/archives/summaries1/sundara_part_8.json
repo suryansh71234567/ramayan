@@ -1,0 +1,43 @@
+{
+  "part_id": "Part 8",
+  "title": "The Warrior's Resolve: Confronting Fear and Destruction",
+  "sargas_range": "37 to 41",
+  "total_sargas": 5,
+  "summary": "Here is a 5-7 sentence summary aligned with the title and Sargas:\n\n**Title:** The Monkey's Mission to Protect Rama's Wife, Sita\n\n**Summary:**\n\nAs Hanuman, the brave monkey, prepares to depart from Sita's presence, he contemplates his next move. He decides to gather information about the strength of Ravana's army and determine whether they can be defeated in battle. To achieve this, Hanuman uproots trees and vines in Ravana's beautiful garden, causing destruction and chaos. This act enforces anger in Ravana's mind, setting the stage for a fierce battle between Hanuman and Ravana's mighty army. With his mission to protect Sita accomplished, Hanuman stands ready to face whatever challenges lie ahead.\n\n**Sargas:**\n\n* Sarga 41: Hanuman uproots trees and vines in Ravana's garden, causing destruction and chaos.\n* Sarga 42-43 (not provided): Hanuman gathers information about the strength of Ravana's army and determines whether they can be defeated in battle.",
+  "selected_shlokas": [
+    {
+      "position": "start",
+      "kanda": "Sundara Kanda",
+      "sarga": 37,
+      "shloka": 1,
+      "shloka_text": "सीता तद्वचनं श्रुत्वा पूर्णचन्द्रनिभानना। हनूमन्तमुवाचेदं धर्मार्थसहितं वचः।।5.37.1।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 38,
+      "shloka": 14,
+      "shloka_text": "शैलस्य चित्रकूटस्य पादे पूर्वोत्तरे पुरा।।5.38.12।। तापसाश्रमवासिन्याः प्राज्यमूलफलोदके। तस्मिन्सिद्धाश्रमे देशे मन्दाकिन्या विदूरतः।।5.38.13।। तस्योपवनषण्डेषु नानापुष्पसुगन्धिषु। विहृत्य सलिले क्लिन्ना ममाङ्के समुपाविशमः।।5.38.14।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 39,
+      "shloka": 22,
+      "shloka_text": "गते हि हरिशार्दूल पुनरागमनाय तु। प्राणानामपि सन्देहो मम स्यान्नात्र संशयः।।5.39.22।।"
+    },
+    {
+      "position": "end",
+      "kanda": "Sundara Kanda",
+      "sarga": 41,
+      "shloka": 21,
+      "shloka_text": "स तस्य कृत्वार्थपतेर्महाकपिर्महद्व्यलीकं मनसो महात्मनः। युयुत्सुरेको बहुभिर्महाबलैश्शिया ज्वलंस्तोरणमास्थितः कपिः।।5.41.21।।"
+    }
+  ],
+  "meta": {
+    "generated_by_model": "llama3:8b",
+    "generated_at": "2025-08-23T15:01:08.969151+05:30",
+    "explanations_used": true,
+    "notes": "Summary produced strictly from explanation fields; shloka_text copied verbatim from source."
+  }
+}

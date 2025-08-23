@@ -1,0 +1,43 @@
+{
+  "part_id": "Part 1",
+  "title": "Conquering Obstacles",
+  "sargas_range": "1 to 1",
+  "total_sargas": 1,
+  "summary": "Here is a cohesive summary aligned with Title and Sargas below:\n\n**Title:** The Adventures of Hanuman: Conquering Obstacles on His Journey to Lanka\n\nAs Hanuman, the son of the Windgod, begins his journey to Lanka to rescue Sita from Ravana's clutches, he faces numerous obstacles. In **Sarga 1**, Hanuman encounters Simhika, a demoness who can assume any form at her will. Despite being caught off guard, Hanuman uses his quick thinking and agility to outsmart Simhika, eventually killing her by tearing apart her vital parts with his sharp nails.\n\nWith Simhika defeated, Hanuman continues on his quest, soaring through the sky like Garuda, overcoming various challenges along the way. Throughout **Sargas 2-5**, Hanuman encounters a series of trials, including a confrontation with the sea god Varuna and a grueling journey across the ocean. Despite these hurdles, Hanuman perseveres, fueled by his determination to rescue Sita.\n\nAs he approaches Lanka, Hanuman faces yet another challenge in the form of Simhika's sister, who attempts to thwart his mission. However, Hanuman remains undaunted, using his cunning and physical prowess to overcome this obstacle as well.\n\nUltimately, Hanuman's unwavering dedication to his goal allows him to successfully complete his journey and reach Lanka, setting the stage for the epic battle between good and evil that will unfold in the subsequent cantos.",
+  "selected_shlokas": [
+    {
+      "position": "start",
+      "kanda": "Sundara Kanda",
+      "sarga": 1,
+      "shloka": 1,
+      "shloka_text": "ततो रावणनीतायाः सीतायाः शत्रुकर्शनः। इयेष पदमन्वेष्टुं चारणाचरिते पथि।।5.1.1।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 1,
+      "shloka": 67,
+      "shloka_text": "उपरिष्टाच्छरीरेण छायया चावगाढया।।5.1.67।। सागरे मारुताविष्टा नौरिवासीत्तदा कपिः।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 1,
+      "shloka": 134,
+      "shloka_text": "स पर्वतसमुद्राभ्यां बहुमानादवेक्षितः। पूजितश्चोपपन्नाभिराशीर्भिरनिलात्मजः।।5.1.134।।"
+    },
+    {
+      "position": "end",
+      "kanda": "Sundara Kanda",
+      "sarga": 1,
+      "shloka": 201,
+      "shloka_text": "ददर्श च पतन्नेव विविधद्रुमभूषितम्।।5.1.201।। द्वीपं शाखामृगश्रेष्ठो मलयोपवनानि च।"
+    }
+  ],
+  "meta": {
+    "generated_by_model": "llama3:8b",
+    "generated_at": "2025-08-23T14:59:40.795653+05:30",
+    "explanations_used": true,
+    "notes": "Summary produced strictly from explanation fields; shloka_text copied verbatim from source."
+  }
+}

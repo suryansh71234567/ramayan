@@ -1,0 +1,8 @@
+requests
+langchain
+faiss-cpu
+sentence-transformers
+bitsandbytes
+accelerate
+transformers
+ollama

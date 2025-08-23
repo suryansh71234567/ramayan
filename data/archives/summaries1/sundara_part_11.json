@@ -1,0 +1,43 @@
+{
+  "part_id": "Part 11",
+  "title": "Hanuman's Oceanic Leap",
+  "sargas_range": "56 to 57",
+  "total_sargas": 2,
+  "summary": "Here is a 5-7 sentence summary aligned with the title and Sargas:\n\n**Title:** Hanuman's Journey to Lanka and His Report to Angada and Jambavan\n\nAs Hanuman descends from the sky, he roars like thunder and shakes his tail in joy, announcing his arrival to the vanaras. The monkeys gather around him, eager to hear about his journey to Lanka and his encounter with Sita. Hanuman shares his story of crossing the ocean, defeating ogres, and seeing Sita in the groves of Ashoka, guarded by Ravana's forces. He describes her beauty, her eagerness to see Rama, and her determination to fast until he returns. The vanaras rejoice at the news, some howling, others chattering, and all echoing Hanuman's words. Angada praises Hanuman's bravery and devotion, knowing that this news will bring joy to Rama, who has been suffering in separation from Sita.",
+  "selected_shlokas": [
+    {
+      "position": "start",
+      "kanda": "Sundara Kanda",
+      "sarga": 56,
+      "shloka": 1,
+      "shloka_text": "ततस्तु शिंशुपामूले जानकीं पर्युपस्थिताम्। अभिवाद्याब्रवीद्दिष्ट्या पश्यामि त्वामिहाक्षताम्।।5.56.1।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 56,
+      "shloka": 29,
+      "shloka_text": "त्रस्तव्यावृत्तवसना व्याकुलीकृतभूषणाः।।5.56.29।। विद्याधर्यः समुत्पेतुस्सहसा धरणीधरात्।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 57,
+      "shloka": 23,
+      "shloka_text": "सर्वथा कृतकार्योऽसौ हनुमान्नात्र संशयः।।5.57.23।। न ह्यस्याकृतकार्यस्य नाद एवंविधो भवेत्।"
+    },
+    {
+      "position": "end",
+      "kanda": "Sundara Kanda",
+      "sarga": 57,
+      "shloka": 51,
+      "shloka_text": "हनूमता कीर्तिमता यशस्विना तथाङ्गदेनाङ्गदबद्धबाहुना। मुदा तदाऽध्यासितमुन्नतं महन्महीधराग्रं ज्वलितं श्रियाभवत्।।5.57.51।।"
+    }
+  ],
+  "meta": {
+    "generated_by_model": "llama3:8b",
+    "generated_at": "2025-08-23T15:01:37.481472+05:30",
+    "explanations_used": true,
+    "notes": "Summary produced strictly from explanation fields; shloka_text copied verbatim from source."
+  }
+}

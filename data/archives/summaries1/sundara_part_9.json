@@ -1,0 +1,43 @@
+{
+  "part_id": "Part 9",
+  "title": "The Battle of Wits and Strength",
+  "sargas_range": "42 to 48",
+  "total_sargas": 7,
+  "summary": "Here is a 5-7 sentence cohesive summary aligned with Title and Sargas below:\n\nAs the battle between Hanuman and Indrajit raged on, Hanuman was bound by the demon's Brahmastra, rendering him immobile. However, he recalled Brahma's boon and realized that his movement was arrested by the power of Brahma. Recognizing that he was caught in a divine trap, Hanuman decided to abide by the ordinance of Brahma and remain silent. Despite being bound by bark ropes by the ogres, Hanuman remained still, awaiting the demon king Ravana's arrival. Meanwhile, Indrajit realized that the Brahmastra did not tolerate another ordinary bondage, causing Hanuman to be released from its hold. As the scene unfolded, Hanuman found himself presented to Ravana, who was eager to interrogate him about his identity and purpose.",
+  "selected_shlokas": [
+    {
+      "position": "start",
+      "kanda": "Sundara Kanda",
+      "sarga": 42,
+      "shloka": 1,
+      "shloka_text": "ततः पक्षिनिनादेन वृक्षभङ्गस्वनेन च। बभूवुस्त्राससम्भ्रान्तास्सर्वे लङ्कानिवासिनः।।5.42.1।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 44,
+      "shloka": 13,
+      "shloka_text": "भ्रामयन्तं कपिं दृष्ट्वा सालवृक्षं महाबलम्। चिक्षेप सुबहून्बाणान्जम्बुमाली महाबलः।।5.44.13।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 47,
+      "shloka": 18,
+      "shloka_text": "ततस्स बाणासनचित्रकार्मुक श्शरप्रवर्षो युधि राक्षसाम्बुदः। शरान्मुमोचाशु हरीश्वराचले वलाहको वृष्टिमिवाचलोत्तमे।।5.47.18।।"
+    },
+    {
+      "position": "end",
+      "kanda": "Sundara Kanda",
+      "sarga": 48,
+      "shloka": 61,
+      "shloka_text": "यथाक्रमं तैस्स कपिर्विपृष्टः कार्यार्थमर्धस्य च मूलमादौ। निवेदयामास हरीश्वरस्य दूतः सकाशादहमागतोऽस्मि।।5.48.61।।"
+    }
+  ],
+  "meta": {
+    "generated_by_model": "llama3:8b",
+    "generated_at": "2025-08-23T15:01:21.009187+05:30",
+    "explanations_used": true,
+    "notes": "Summary produced strictly from explanation fields; shloka_text copied verbatim from source."
+  }
+}

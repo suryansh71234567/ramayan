@@ -1,0 +1,43 @@
+{
+  "part_id": "Part 6",
+  "title": "The Messenger of Hope: Hanuman's Encounter with Sita",
+  "sargas_range": "25 to 32",
+  "total_sargas": 8,
+  "summary": "Here is a 5-7 sentence summary aligned with the title and Sargas:\n\n**Title:** \"Hanuman's Praise of Rama\"\n\n**Sargas:** 30-32\n\nThe great monkey Hanuman arrives at the ashrama where Sita is staying, disguised as a tree. He begins to praise Rama, recounting his virtues and accomplishments. Sita, initially frightened by Hanuman's appearance, soon becomes entranced by his words and begins to think of Rama with longing. As Hanuman continues to speak, Sita's thoughts become increasingly focused on her beloved Rama, leading her to experience a sense of joy and hope. Ultimately, Sita is overjoyed to hear that Rama is alive and well, and she begins to meditate on him once more.",
+  "selected_shlokas": [
+    {
+      "position": "start",
+      "kanda": "Sundara Kanda",
+      "sarga": 25,
+      "shloka": 1,
+      "shloka_text": "अथ तासां वदन्तीनां परुषं दारुणं बहु। राक्षसीनामासौम्यानां रुरोद जनकात्मजा।।5.25.1।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 27,
+      "shloka": 5,
+      "shloka_text": "आत्मानं खादतानार्या न सीतां भक्षयिष्यथ। जनकस्य सुतामिष्टां स्नुषां दशरथस्य च।।5.27.5।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 30,
+      "shloka": 2,
+      "shloka_text": "अवेक्षमाणस्तां देवीं देवतामिव नन्दने। ततो बहुविधां चिन्तां चिन्तयामास वानरः।।5.30.2।।"
+    },
+    {
+      "position": "end",
+      "kanda": "Sundara Kanda",
+      "sarga": 32,
+      "shloka": 14,
+      "shloka_text": "नमोऽस्तु वाचस्पतये सवज्रिणे स्वयंभुवे चैव हुताशनाय च। अनेन चोक्तं यदिदं ममाग्रतो वनौकसा तच्छ तथास्तु नान्यथा।।5.32.14।।"
+    }
+  ],
+  "meta": {
+    "generated_by_model": "llama3:8b",
+    "generated_at": "2025-08-23T15:00:50.364910+05:30",
+    "explanations_used": true,
+    "notes": "Summary produced strictly from explanation fields; shloka_text copied verbatim from source."
+  }
+}

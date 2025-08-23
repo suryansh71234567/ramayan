@@ -1,0 +1,43 @@
+{
+  "part_id": "Part 5",
+  "title": "The Ogresses' Menace",
+  "sargas_range": "18 to 24",
+  "total_sargas": 7,
+  "summary": "Here is a summary of Title and Sargas 20-47:\n\nThe demonic ogresses led by Surpanakha continue to threaten and intimidate Sita, advising her to abandon Rama and accept Ravana as her husband. They taunt her about the fleeting nature of youth and the impossibility of escape or rescue. The ogresses variously propose feasting on Sita's body parts, sharing her flesh among themselves, and indulging in a dance of pleasure after consuming her. Sita, trembling with fear, remains steadfast in her devotion to Rama and refuses to submit to their demands. Despite the ogresses' threats and intimidation, Sita remains resolute in her determination to remain loyal to her husband.",
+  "selected_shlokas": [
+    {
+      "position": "start",
+      "kanda": "Sundara Kanda",
+      "sarga": 18,
+      "shloka": 1,
+      "shloka_text": "तथा विप्रेक्ष्यमाणस्य वनं पुष्पितपादपम्। विचिन्वतश्च वैदेहीं किंचिच्छेषा निशाऽभवत्।।5.18.1।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 20,
+      "shloka": 24,
+      "shloka_text": "यथेष्टं च प्रयच्छ त्वं पृथिवीं वा धनानि च। ललस्व मयि विस्रब्धा धृष्टमाज्ञापयस्व च।।5.20.24।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 22,
+      "shloka": 34,
+      "shloka_text": "एकाक्षीमेककर्णां च कर्णप्रावरणां तथा। गोकर्णीं हस्तिकर्णीं च लम्बकर्णीमकर्णिकाम्।।5.22.33।। हस्तिपाद्यश्वपाद्यौ च गोपादीं पादचूलिकाम्। एकाक्षीमेकपादीं च पृथुपादीमपादिकाम्।।5.22.34।। अतिमात्रशिरोग्रीवामतिमात्रकुचोदरीम्। अतिमात्रास्यनेत्रां च दीर्घजिह्वामजिह्विकाम्।।5.22.35।। अनासिकां सिंहमुखीं गोमुखीं सूकरीमुखीम्।"
+    },
+    {
+      "position": "end",
+      "kanda": "Sundara Kanda",
+      "sarga": 24,
+      "shloka": 48,
+      "shloka_text": "एवं संभर्त्स्यमाना सा सीता सुरसुतोपमा। राक्षसीभिः सुघोराभिर्दैर्यमुत्सृज्य रोदिति।।5.24.48।।"
+    }
+  ],
+  "meta": {
+    "generated_by_model": "llama3:8b",
+    "generated_at": "2025-08-23T15:00:39.237355+05:30",
+    "explanations_used": true,
+    "notes": "Summary produced strictly from explanation fields; shloka_text copied verbatim from source."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "part_id": "Part 2",
+  "title": "The Radiant Realm of Ravana's Residence",
+  "sargas_range": "2 to 8",
+  "total_sargas": 7,
+  "summary": "Here is a 5-7 sentence summary aligned with the title and Sargas:\n\n**Title:** The Glorious Pushpaka Palace\n\nThe glorious Pushpaka palace, fashioned by Visvakarma, is a marvel of divine architecture. According to Sage Valmiki's epic Ramayana, Hanuman, the courageous son of the Windgod, beholds this magnificent aerial chariot inlaid with gems and diamonds, latticed with artificial windows of barnished gold. The Pushpaka palace is designed by Kubera's divine efforts and prowess, with unique features such as colorful peaks, delightful places of rest, and a breathtaking design that appears like a mountain with many wonderful towers around. This extraordinary palace is borne by multitudes of Bhutas, demons ranging in the night sky, with gluttonous eyes. The Pushpaka palace is not only a symbol of grandeur but also a testament to the architectural prowess of Visvakarma and the divine will of Kubera.",
+  "selected_shlokas": [
+    {
+      "position": "start",
+      "kanda": "Sundara Kanda",
+      "sarga": 2,
+      "shloka": 1,
+      "shloka_text": "स सागरमनादृष्यमतिक्रम्य महाबलः। त्रिकूटशिखरे लङ्कां स्थितां स्वस्थो ददर्श ह।।5.2.1।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 3,
+      "shloka": 20,
+      "shloka_text": "थ सा हरिशार्दूलं प्रविशन्तं महाबलम्। नगरी स्वेन रूपेण ददर्श पवनात्मजम्।।5.3.20।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 5,
+      "shloka": 17,
+      "shloka_text": "ततो वरार्हाः सुविशुद्धभावा स्तेषां स्त्रियस्तत्र महानुभावाः। प्रियेषु पानेषु च सक्तभावा ददर्श तारा इव सुप्रभावाः।।5.5.17।।"
+    },
+    {
+      "position": "end",
+      "kanda": "Sundara Kanda",
+      "sarga": 8,
+      "shloka": 7,
+      "shloka_text": "वसन्तपुष्पोत्करचारुदर्शनं वसन्तमासादपि कान्तदर्शनम्। स पुष्पकं तत्र विमानमुत्तमं ददर्श तद्वानरवीरसत्तमः।।5.8.7।।"
+    }
+  ],
+  "meta": {
+    "generated_by_model": "llama3:8b",
+    "generated_at": "2025-08-23T14:59:55.624247+05:30",
+    "explanations_used": true,
+    "notes": "Summary produced strictly from explanation fields; shloka_text copied verbatim from source."
+  }
+}

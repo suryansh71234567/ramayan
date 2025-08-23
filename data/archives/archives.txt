@@ -1,0 +1,80 @@
+code for main to simulate the 13 verses
+    sarga_list = load_sunderkand_data(DATA_FILE_PATH)
+    print(f"Loaded {len(sarga_list)} sargas from Sunderkand.")
+    if sarga_list:
+        # Segment the sargas into chunks based on shloka count
+        subpart_chunks = segment_sargas_by_shloka_count(sarga_list)
+        
+        final_segments = []
+        for chunk in subpart_chunks:
+            start_sarga = chunk[0][0]
+            end_sarga = chunk[-1][0]
+            sarga_count = len(chunk)
+            
+            # Get a thematic name for the chunk
+            subpart_name = get_subpart_name(chunk)
+            
+            final_segments.append({
+                "subpart_name": subpart_name,
+                "sarga_range": f"Sarga {start_sarga} to {end_sarga}",
+                "sarga_count": sarga_count
+            })
+            
+        print("\n--- Sunderkand Subpart Breakdown ---")
+        print(f"Total number of subparts: {len(final_segments)}\n")
+        
+        for i, part in enumerate(final_segments, 1):
+            print(f"Part {i}: {part['subpart_name']}")
+            print(f"   {part['sarga_range']} ({part['sarga_count']} sargas)")
+            print("-" * 30)
+    else:
+        print("Exiting.")
+
+code for test.py used earlier for testing
+# import json
+# import requests
+# import torch
+# from transformers import AutoTokenizer, AutoModelForCausalLM
+
+
+# def generate_with_ollama(prompt):
+#     """
+#     Sends a prompt to the local Ollama server and returns the generated text.
+#     """
+#     payload = {
+#         "model": "llama3:8b",
+#         "prompt": prompt,
+#         "stream": False,
+#         "options": {
+#             "temperature": 0.3,
+#         }
+#     }
+
+#     try:
+#         response = requests.post("http://localhost:11434/api/generate", json=payload)
+#         response.raise_for_status()  # This will raise an HTTPError for bad responses (4xx or 5xx)
+#         result = response.json()
+#         return result['response']
+#     except requests.exceptions.ConnectionError as e:
+#         print(f"Connection Error: Is the Ollama server running? Details: {e}")
+#         return None
+#     except requests.exceptions.HTTPError as e:
+#         print(f"HTTP Error: An error occurred with the API request. Details: {e}")
+#         return None
+#     except Exception as e:
+#         print(f"An unexpected error occurred: {e}")
+#         return None
+    
+# if __name__ == "__main__":
+#     prompt = """
+#     You are a literary analyst specializing in ancient Indian epic.the Valmiki Ramayana, the sunderkaand which is divided into 68 sargas. Your task is to analyze the content, identify major thematic shifts, and segment the entire sunderkaand into 10 to 15 smaller, logical subparts. 
+
+
+#     """
+    
+#     response = generate_with_ollama(prompt)
+#     if response:
+#         print("Response from Ollama:")
+#         print(response)
+#     else:
+#         print("Failed to get a response from Ollama.")

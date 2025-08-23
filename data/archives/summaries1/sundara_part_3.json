@@ -1,0 +1,43 @@
+{
+  "part_id": "Part 3",
+  "title": "Despondency and Renewed Resolve",
+  "sargas_range": "9 to 12",
+  "total_sargas": 4,
+  "summary": "Here is a 5-7 sentence summary aligned with Title and Sargas:\n\n**Title:** Hanuman's Search for Sita in Lanka\n\nIn Sargas 11-12, Hanuman searches for Sita in Ravana's harem and mansion but fails to find her despite his thorough search. He visits various parts of the mansion, including bowers of creepers, picture galleries, and gymnasiums, but is unsuccessful in finding Janaki. Hanuman becomes despondent, realizing that he may not have succeeded in his task, but then regains his confidence and decides to continue searching. He scours every inch of the mansion, even checking spaces as small as four fingers wide, but still cannot find Sita. Despite his efforts, Hanuman remains hopeful and determined to find Rama's wife, eventually deciding to search again with renewed determination.",
+  "selected_shlokas": [
+    {
+      "position": "start",
+      "kanda": "Sundara Kanda",
+      "sarga": 9,
+      "shloka": 1,
+      "shloka_text": "तस्यालयवरिष्ठस्य मध्ये विपुलमायतं। ददर्श भवनश्रेष्ठं हनुमान्मारुतात्मजः।।5.9.1।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 9,
+      "shloka": 67,
+      "shloka_text": "रावणे सुखसंविष्टे तास्त्रियो विविधप्रभाः। ज्वलन्तः काञ्चना दीपाः प्रैक्षन्तानिमिषा इव।।5.9.67।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 11,
+      "shloka": 6,
+      "shloka_text": "अङ्गनानां सहस्रेण भूषितेन विभूषणैः।।5.11.6।। रूपसल्लापशीलेन युक्तगीतार्थभाषिणा। देशकालाभियुक्तेन युक्तवाक्याभिधायिना।।5.11.7।। रताभिरतसंसुप्तं ददर्श हरियूथपः।"
+    },
+    {
+      "position": "end",
+      "kanda": "Sundara Kanda",
+      "sarga": 12,
+      "shloka": 25,
+      "shloka_text": "अवतीर्य विमानाच्च हनुमान् मारुतात्मजः। चिन्तामुपजगामाथ शोकोपहतचेतनः।।5.12.25।।"
+    }
+  ],
+  "meta": {
+    "generated_by_model": "llama3:8b",
+    "generated_at": "2025-08-23T15:00:06.323849+05:30",
+    "explanations_used": true,
+    "notes": "Summary produced strictly from explanation fields; shloka_text copied verbatim from source."
+  }
+}

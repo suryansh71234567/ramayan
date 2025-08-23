@@ -1,0 +1,43 @@
+{
+  "part_id": "Part 13",
+  "title": "Rama's Tears and Hanuman's Words",
+  "sargas_range": "62 to 68",
+  "total_sargas": 7,
+  "summary": "Here is a 5-7 sentence summary aligned with the title and Sargas:\n\nIn this chapter, Sri Rama asks Hanuman to narrate everything that Queen Sita had said to him while they were separated from each other. Hanuman then recounts Sita's words, including her description of the crow that had scratched her breasts and the incident where Rama had saved the crow's life. Sita also implores Rama to come quickly and slay Ravana in battle to rescue her. She expresses doubts about the vanaras and bears crossing the ocean, but is confident in Hanuman's abilities to succeed in his mission.",
+  "selected_shlokas": [
+    {
+      "position": "start",
+      "kanda": "Sundara Kanda",
+      "sarga": 62,
+      "shloka": 1,
+      "shloka_text": "तानुवाच हरिश्रेष्ठो हनुमान्वानरर्षभः। अव्यग्रमनसो यूयं मधु सेवत वानराः।।5.62.1।। अहमावारयिष्यामि युष्माकं परिपन्थिनः।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 63,
+      "shloka": 27,
+      "shloka_text": "प्रीतोऽस्मि सोऽहं यद्भुक्तं वनं तैः कृतकर्मभिः। मर्षितं मर्षणीयं च चेष्टितं कृतकर्मणाम्।।5.63.27।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 65,
+      "shloka": 24,
+      "shloka_text": "जीवितं धारयिष्यामि मासं दशरथात्मज।।5.65.24।। ऊर्ध्वं मासान्न जीवेयं रक्षसां वशमागता।"
+    },
+    {
+      "position": "end",
+      "kanda": "Sundara Kanda",
+      "sarga": 68,
+      "shloka": 29,
+      "shloka_text": "ततो मया वाग्भिरदीनभाषिणा शिवाभिरिष्टाभिरभिप्रसादिता। जगाम शान्तिं मम मैथिलात्मजा तवापि शोकेन तदाभिपीडिता।।5.68.29।।"
+    }
+  ],
+  "meta": {
+    "generated_by_model": "llama3:8b",
+    "generated_at": "2025-08-23T15:02:00.925154+05:30",
+    "explanations_used": true,
+    "notes": "Summary produced strictly from explanation fields; shloka_text copied verbatim from source."
+  }
+}

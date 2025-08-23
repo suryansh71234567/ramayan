@@ -1,0 +1,43 @@
+{
+  "part_id": "Part 7",
+  "title": "Rama's Unwavering Love and Sita's Hope",
+  "sargas_range": "33 to 36",
+  "total_sargas": 4,
+  "summary": "Here is a 5-7 sentence summary aligned with Title and Sargas:\n\n**Title:** The Misery of Sita in Lanka (Sargas 35-41)\n\nThe goddess Sita, separated from her beloved husband Rama, laments her fate in the court of King Ravana. She expresses her longing for Rama and hopes that he will soon rescue her from her misery. Hanuman, the messenger monkey, reassures Sita that Rama is well and will soon come to liberate her. He describes Rama's love for Sita, which has only grown stronger since their separation. Sita's sorrow is mitigated by these words of comfort, but she remains anxious for Rama's arrival and the defeat of Ravana.",
+  "selected_shlokas": [
+    {
+      "position": "start",
+      "kanda": "Sundara Kanda",
+      "sarga": 33,
+      "shloka": 1,
+      "shloka_text": "सोऽवतीर्य द्रुमात्तस्माद्विद्रुमप्रतिमाननः। विनीतवेषः कृपणः प्रणिपत्योपसृत्य च।।5.33.1।। तामब्रवीन्महातेजा हनूमान्मारुतात्मजः। शिरस्यञ्जलिमाधाय सीतां मधुरया गिरा।।5.33.2।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 34,
+      "shloka": 37,
+      "shloka_text": "नित्यं स्मरति रामस्त्वां ससुग्रीव स्सलक्ष्मणः। दिष्ट्या जीवसि वैदेहि राक्षसीवशमागता।।5.34.37।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 35,
+      "shloka": 71,
+      "shloka_text": "लङ्का चापि मया रात्रौ प्रविष्टा राक्षसाकुला। रावणश्च मया दृष्टस्त्वं च शोकपरिप्लुता।।5.35.71।।"
+    },
+    {
+      "position": "end",
+      "kanda": "Sundara Kanda",
+      "sarga": 36,
+      "shloka": 47,
+      "shloka_text": "सा रामसङ्कीर्तनवीतशोका रामस्य शोकेन समानशोका। शरन्मुखे साम्बुदशेषचन्द्रा निशेव वैदेहसुता बभूव।।5.36.47।।"
+    }
+  ],
+  "meta": {
+    "generated_by_model": "llama3:8b",
+    "generated_at": "2025-08-23T15:00:59.660052+05:30",
+    "explanations_used": true,
+    "notes": "Summary produced strictly from explanation fields; shloka_text copied verbatim from source."
+  }
+}

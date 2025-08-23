@@ -1,0 +1,43 @@
+{
+  "part_id": "Part 4",
+  "title": "Despair and Devotion",
+  "sargas_range": "13 to 17",
+  "total_sargas": 5,
+  "summary": "Here is a 5-7 sentence cohesive summary aligned with Title and Sargas below:\n\nIn the Seventeenth Sarga of Sundarakanda, Hanuman, the monkey god, beholds the beautiful princess Sita, who has been abandoned by her husband Rama and is being tormented by demons. Despite her worn-out appearance, Sita shines like a lotus flower smeared with mud, her chastity protecting her from harm. Hanuman's eyes are intoxicatingly delighted as he sees Sita, and he offers his salutations to Rama and Lakshmana in his heart. He then covers himself with leaves and waits patiently to ensure that no danger comes near Sita.\n\nNote: The summary is based on the original Sanskrit text of Ramayana by Valmiki, and any interpretation or translation may vary depending on the source.",
+  "selected_shlokas": [
+    {
+      "position": "start",
+      "kanda": "Sundara Kanda",
+      "sarga": 13,
+      "shloka": 1,
+      "shloka_text": "विमानात्तु सुसम्क्रम्य प्राकारं हरियूथपः। हनुमान्वेगवानासीद्यथा विद्युद्घनान्तरे।।5.13.1।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 14,
+      "shloka": 12,
+      "shloka_text": "﻿दिशस्सर्वाः प्रधावन्तं वृक्षषण्डगतं कपिम्। दृष्ट्वा सर्वाणि भूतानि वसन्त इति मेनिरे।।5.14.12।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 15,
+      "shloka": 39,
+      "shloka_text": "दुःखेन बुबुधे सीतां हनुमाननलङ्कृताम्। संस्कारेण यथा हीनां वाचमर्थान्तरं गताम्।।5.15.39।।"
+    },
+    {
+      "position": "end",
+      "kanda": "Sundara Kanda",
+      "sarga": 17,
+      "shloka": 32,
+      "shloka_text": "नमस्कृत्वा च रामाय लक्ष्मणाय च वीर्यवान्। सीतादर्शनसंहृष्टो हनुमान् संवृतोऽभवत्।।5.17.32।।"
+    }
+  ],
+  "meta": {
+    "generated_by_model": "llama3:8b",
+    "generated_at": "2025-08-23T15:00:21.487444+05:30",
+    "explanations_used": true,
+    "notes": "Summary produced strictly from explanation fields; shloka_text copied verbatim from source."
+  }
+}

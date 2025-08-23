@@ -1,0 +1,43 @@
+{
+  "part_id": "Part 10",
+  "title": "The Fiery Guardian of Virtue",
+  "sargas_range": "49 to 55",
+  "total_sargas": 7,
+  "summary": "Here is a 5-7 sentence summary aligned with the title and Sargas:\n\n**Title:** Hanuman's Anguish and Reflections\n\n**Summary:** Hanuman, after setting fire to Lanka, reflects on his actions and feels great remorse for burning down the city without thinking of Rama's mission. He bemoans his failure in protecting Sita and imagines a worst-case scenario where she perishes. However, he soon realizes that Sita is not harmed due to her purity and devotion to Rama. Hanuman becomes convinced that Sita will emerge unscathed from the fire, just like the goddesses of old. He then hears the words of charanas praising Sita's power of righteousness, which further solidifies his understanding. With a sense of relief and happiness, Hanuman decides to depart, knowing that Sita is safe.",
+  "selected_shlokas": [
+    {
+      "position": "start",
+      "kanda": "Sundara Kanda",
+      "sarga": 49,
+      "shloka": 1,
+      "shloka_text": "ततस्स कर्मणा तस्य विस्मितो भीमविक्रमः। हनुमान्रोषताम्राक्षो रक्षोधिपमवैक्षत।।5.49.1।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 51,
+      "shloka": 43,
+      "shloka_text": "सर्वलोकेश्वरस्यैवं कृत्वा विप्रियमुत्तमम्। रामस्य राजसिंहस्य दुर्लभं तव जीवितम्।।5.51.43।।"
+    },
+    {
+      "position": "middle",
+      "kanda": "Sundara Kanda",
+      "sarga": 54,
+      "shloka": 6,
+      "shloka_text": "ततः प्रदीप्तलाङ्गूलस्सविद्युदिव तोयदः। भवनाग्रेषु लङ्काया विचचार महाकपिः।।5.54.6।।"
+    },
+    {
+      "position": "end",
+      "kanda": "Sundara Kanda",
+      "sarga": 55,
+      "shloka": 34,
+      "shloka_text": "ततः कपिः प्राप्तमनोरथार्थस्तामक्षतां राजसुतां विदित्वा। प्रत्यक्षतस्तां पुनरेव दृष्टवा प्रतिप्रयाणाय मतिं चकार।।5.55.34।।"
+    }
+  ],
+  "meta": {
+    "generated_by_model": "llama3:8b",
+    "generated_at": "2025-08-23T15:01:28.882957+05:30",
+    "explanations_used": true,
+    "notes": "Summary produced strictly from explanation fields; shloka_text copied verbatim from source."
+  }
+}
