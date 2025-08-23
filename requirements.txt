@@ -6,3 +6,9 @@ bitsandbytes
 accelerate
 transformers
 ollama
+Flask
+python-dotenv
+langchain-community
+huggingface-hub
+gunicorn
+openai

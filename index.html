@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramayana Stories</title>
+<!-- Merriweather font -->
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+/* Background */
+.bg-custom-image {
+/* Default placeholder background image */
+background-image: url("https://placehold.co/1920x1080/282218/FCD34D?text=Ramayana+Epic");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+transition: background-image 0.5s ease-in-out; /* Smooth transition for background change */
+}
+/* Scrollbar */
+.scrollbar-thin::-webkit-scrollbar { width: 8px; }
+.scrollbar-thin::-webkit-scrollbar-track {
+background: #d1b18e;
+border-radius: 10px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+background: #9f7b59;
+border-radius: 10px;
+border: 2px solid #d1b18e;
+}
+body {
+font-family: 'Merriweather', serif;
+}
+/* This class is now used for both animated and static content */
+.word-anim { opacity: 0; transition: opacity 0.5s ease; }
+.word-anim.show { opacity: 1; }
+/* Container glow */
+.cloud-effect-container {
+position: relative;
+overflow: visible;
+}
+/* Moving cloud elements */
+.cloud {
+position: absolute;
+width: 100px;
+height: 100px;
+background: radial-gradient(circle, rgba(255, 255, 255, 0.65) 0%, transparent 70%);
+filter: blur(18px);
+opacity: 0.75;
+border-radius: 50%;
+pointer-events: none;
+z-index: 0;
+}
+.cloud1 { animation: orbit1 14s linear infinite; }
+.cloud2 { animation: orbit2 18s linear infinite; }
+.cloud3 { animation: orbit3 20s linear infinite; }
+.cloud4 { animation: orbit4 22s linear infinite; }
+.cloud5 { animation: orbit5 26s linear infinite; }
+/* Orbit animations - hugging the input box closer */
+@keyframes orbit1 {
+0% { transform: translate(-40px, -10px); }
+25% { transform: translate(220px, -20px); }
+50% { transform: translate(240px, 70px); }
+75% { transform: translate(-60px, 60px); }
+100% { transform: translate(-40px, -10px); }
+}
+@keyframes orbit2 {
+0% { transform: translate(20px, -60px); }
+25% { transform: translate(240px, 0px); }
+50% { transform: translate(20px, 110px); }
+75% { transform: translate(-80px, 0px); }
+100% { transform: translate(20px, -60px); }
+}
+@keyframes orbit3 {
+0% { transform: translate(160px, -50px); }
+25% { transform: translate(260px, 30px); }
+50% { transform: translate(160px, 120px); }
+75% { transform: translate(-60px, 30px); }
+100% { transform: translate(160px, -50px); }
+}
+@keyframes orbit4 {
+0% { transform: translate(-30px, 40px); }
+25% { transform: translate(220px, 40px); }
+50% { transform: translate(230px, 90px); }
+75% { transform: translate(-50px, 90px); }
+100% { transform: translate(-30px, 40px); }
+}
+@keyframes orbit5 {
+0% { transform: translate(100px, -70px); }
+25% { transform: translate(260px, 10px); }
+50% { transform: translate(100px, 120px); }
+75% { transform: translate(-70px, 10px); }
+100% { transform: translate(100px, -70px); }
+}
+.input-cloud-container {
+position: relative;
+flex-grow: 1;
+z-index: 1;
+}
+.input-cloud-container input {
+position: relative;
+z-index: 2;
+}
+/* Animation classes */
+.fade-slide-in {
+opacity: 0;
+transform: translateY(20px);
+animation: fade-slide-in 0.8s ease-out forwards;
+}
+@keyframes fade-slide-in {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+/* New CSS for 70% chat size */
+.chat-70-percent {
+position: fixed !important;
+top: 50% !important;
+left: 50% !important;
+transform: translate(-50%, -50%) !important;
+width: 70vw !important;
+max-width: 70vw !important;
+height: 70vh !important;
+max-height: 70vh !important;
+border-radius: 1rem !important; /* Keep rounded corners */
+z-index: 50 !important;
+display: flex; /* Added flexbox to control child layout */
+flex-direction: column; /* Stack children vertically */
+justify-content: space-between; /* Push input to the bottom */
+}
+.chat-70-percent #chat-messages {
+max-height: calc(70vh - 150px) !important;
+}
+
+/* Quiz-specific styles */
+.option-button {
+  @apply w-full py-3 px-6 text-lg rounded-lg border-2 border-transparent transition-colors duration-200
+         bg-black bg-opacity-30 backdrop-blur-sm text-white hover:bg-[#D5A76E] hover:text-black hover:border-[#D5A76E] shadow-md;
+}
+.option-button.correct {
+  @apply bg-green-700 bg-opacity-70 border-green-500 text-white;
+}
+.option-button.incorrect {
+  @apply bg-red-700 bg-opacity-70 border-red-500 text-white;
+}
+</style>
+</head>
+<body class="bg-custom-image text-white min-h-screen relative">
+<!-- Dark overlay -->
+<div class="absolute inset-0 bg-black opacity-60"></div>
+<!-- Main content container, adjusted for scrolling -->
+<div class="relative z-10 flex flex-col items-center justify-start py-12 px-4 sm:px-6 lg:px-8 min-h-screen overflow-y-auto">
+
+<!-- Back Button (initially hidden) -->
+<button id="back-button" class="fixed top-8 left-8 z-30 p-3 bg-black bg-opacity-40 backdrop-blur-sm rounded-full border border-[#D5A76E] shadow-lg hover:bg-[#D5A76E] hover:text-black transition-all duration-300 hover:scale-110 hidden">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+<path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+</svg>
+</button>
+
+<!-- Title -->
+<div class="text-center mb-8">
+<h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-widest mb-2 drop-shadow-lg text-[#FCD34D]">
+वाल्मीकि रामायण
+</h1>
+<p class="text-xl sm:text-2xl font-light drop-shadow-lg text-white">
+A Journey Through an Ancient Epic
+</p>
+</div>
+
+<!-- Chapter List Container, reverted max-width to original -->
+<div id="chapter-container" class="relative z-10 w-full max-w-2xl px-8 mt-3">
+<h2 class="text-3xl font-bold mb-6 text-center text-[#FCD34D]">Select a Chapter</h2>
+<div id="chapters-list" class="flex flex-col md:grid md:grid-cols-2 gap-4">
+<div id="loading-chapters" class="flex items-center justify-center h-full col-span-2">
+<svg class="animate-spin -ml-1 mr-3 h-10 w-10 text-[#FCD34D]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+</svg>
+<span>Loading chapters...</span>
+</div>
+<!-- Chapter buttons will be populated here by JavaScript -->
+</div>
+<div class="w-full mt-6 text-center">
+  <button id="quiz-button" class="w-full sm:w-auto py-4 px-8 text-xl font-bold rounded-xl border-2 border-[#D5A76E] shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-gradient-to-r from-[#D5A76E] to-[#FCD34D] text-black">
+    Take a Quiz
+  </button>
+</div>
+</div>
+
+<!-- Quiz Window (initially hidden) -->
+<div id="quiz-container" class="relative z-10 w-full max-w-2xl p-8 hidden">
+  <div class="bg-black bg-opacity-40 backdrop-blur-sm rounded-xl border border-[#D5A76E] shadow-2xl p-8">
+    <h2 class="text-3xl font-bold text-[#FCD34D] mb-6 text-center">Ramayana Quiz</h2>
+    <div id="quiz-content" class="text-lg text-justify leading-relaxed text-white scrollbar-thin overflow-y-auto max-h-[60vh] md:max-h-[70vh]">
+      <div id="loading-quiz" class="flex items-center justify-center h-full">
+        <svg class="animate-spin -ml-1 mr-3 h-10 w-10 text-[#FCD34D]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <span>Loading quiz...</span>
+      </div>
+      <div id="question-display" class="space-y-6 hidden">
+        <p id="question-text" class="text-xl font-bold text-[#FCD34D]"></p>
+        <div id="options-container" class="flex flex-col space-y-4">
+          <!-- Options will be added here -->
+        </div>
+        <div id="quiz-feedback" class="text-center font-bold"></div>
+      </div>
+      <div id="quiz-results" class="space-y-4 hidden">
+        <h3 class="text-2xl font-bold text-[#FCD34D] text-center">Quiz Complete!</h3>
+        <p id="score-text" class="text-xl text-center"></p>
+        <button id="retake-quiz-button" class="w-full py-2 px-4 text-center bg-[#D5A76E] text-black rounded-lg hover:bg-[#FCD34D] transition-colors">Retake Quiz</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Story Window (initially hidden) -->
+<div id="story-container" class="relative z-10 w-full max-w-4xl p-8 hidden md:mr-24 lg:mr-40">
+<div class="bg-black bg-opacity-40 backdrop-blur-sm rounded-xl border border-[#D5A76E] shadow-2xl p-8">
+<div class="flex items-center justify-between mb-4">
+<h2 id="story-title" class="text-3xl font-bold text-[#FCD34D]"></h2>
+<!-- Story Controls at top right -->
+<div class="flex items-center space-x-2">
+<!-- Progress bar container with new ID -->
+<div id="progress-bar-container" class="relative w-24 h-2 bg-gray-700 rounded-full overflow-hidden shadow-inner cursor-pointer hidden">
+<div id="story-progress" class="h-full bg-[#D5A76E] transition-[width] duration-300 ease-linear"></div>
+</div>
+<button id="play-pause-button" class="p-2 bg-[#D5A76E] text-black rounded-full shadow-lg hover:bg-[#FCD34D] transition-colors hidden">
+<!-- Play icon -->
+<svg id="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+<path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.38 2.755-1.638L18.75 12l-11.495 7.985c-1.226.742-2.755-.209-2.755-1.638V5.653z" clip-rule="evenodd" />
+</svg>
+<!-- Pause icon -->
+<svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 hidden">
+<path fill-rule="evenodd" d="M6.75 5.25a.75.75 0 01.75-.75H9a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H7.5a.75.75 0 01-.75-.75V5.25zM14.25 5.25a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75h-1.5a.75.75 0 01-.75-.75V5.25z" clip-rule="evenodd" />
+</svg>
+<!-- Replay icon -->
+<svg id="replay-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 hidden">
+<path fill-rule="evenodd" d="M4.755 10.059a7.5 7.5 0 0112.548-3.364l1.903 1.903h-3.183a.75.75 0 100 1.5h4.992a.75.75 0 00.75-.75V6.108a.75.75 0 00-1.5 0v3.185L18.252 8.51a9 9 0 10-2.356 5.567.75.75 0 001.085.603A7.5 7.5 0 114.755 10.06z" clip-rule="evenodd" />
+</svg>
+</button>
+</div>
+</div>
+<div id="story-content" class="text-lg text-justify leading-relaxed text-white scrollbar-thin overflow-y-auto max-h-[60vh] md:max-h-[70vh]">
+<div id="loading-story" class="flex items-center justify-center h-full">
+<svg class="animate-spin -ml-1 mr-3 h-10 w-10 text-[#FCD34D]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+</svg>
+<span>Loading the epic tale...</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Chatbot hidden container -->
+<div id="chat-container" class="fixed bottom-24 right-8 z-20 w-80 h-[400px] bg-black bg-opacity-40 backdrop-blur-sm rounded-xl border border-[#D5A76E] shadow-2xl flex flex-col transition-transform duration-300 transform translate-x-full hidden">
+<div class="p-4 bg-black bg-opacity-20 border-b border-[#D5A76E] text-center rounded-t-xl flex justify-between items-center">
+<h3 class="text-xl font-bold text-[#FCD34D]">Ramayana AI</h3>
+<!-- New toggle button -->
+<button id="toggle-chat-size" class="p-1 text-[#FCD34D] hover:text-white transition-colors">
+<svg id="expand-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+<path fill-rule="evenodd" d="M3.75 3.75H7.5a.75.75 0 010 1.5H5.25v2.25a.75.75 0 01-1.5 0V3.75zM7.5 20.25H3.75V16.5a.75.75 0 011.5 0v2.25h2.25a.75.75 0 010 1.5zM16.5 3.75h3.75V7.5a.75.75 0 01-1.5 0V5.25h-2.25a.75.75 0 010-1.5zM20.25 16.5v3.75h-3.75a.75.75 0 010-1.5h2.25v-2.25a.75.75 0 011.5 0z" clip-rule="evenodd" />
+</svg>
+<svg id="collapse-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 hidden">
+<path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z" clip-rule="evenodd" />
+</svg>
+</button>
+</div>
+<div id="chat-messages" class="flex-grow p-4 overflow-y-auto scrollbar-thin">
+<div class="mb-2 p-3 bg-black bg-opacity-60 text-white rounded-lg self-start">
+Hello, ask me anything about the Ramayana!
+</div>
+</div>
+<!-- Input container moved inside the main chat container -->
+<div id="chat-input-container" class="p-4 border-t border-[#D5A76E] flex space-x-2 cloud-effect-container">
+<!-- Floating clouds (denser, 5 instead of 3) -->
+<div class="cloud cloud1"></div>
+<div class="cloud cloud2"></div>
+<div class="cloud cloud3"></div>
+<div class="cloud cloud4"></div>
+<div class="cloud cloud5"></div>
+<!-- Input -->
+<div class="input-cloud-container">
+<input type="text" id="chat-input"
+placeholder="Type your message..."
+class="w-full p-2 rounded-lg bg-black bg-opacity-60 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FCD34D]">
+</div>
+<button id="send-button"
+class="p-2 bg-[#D5A76E] text-black rounded-lg hover:bg-[#FCD34D] transition-colors">
+Send
+</button>
+</div>
+</div>
+</div>
+
+<script>
+(async function() {
+const chapterContainer = document.getElementById('chapter-container');
+const chaptersList = document.getElementById('chapters-list');
+const storyContainer = document.getElementById('story-container');
+const storyTitle = document.getElementById('story-title');
+const storyContent = document.getElementById('story-content');
+const chatContainer = document.getElementById('chat-container');
+const chatInputContainer = document.getElementById('chat-input-container');
+const chatMessages = document.getElementById('chat-messages');
+const chatInput = document.getElementById('chat-input');
+const sendButton = document.getElementById('send-button');
+const loadingChapters = document.getElementById('loading-chapters');
+const loadingStory = document.getElementById('loading-story');
+const playPauseButton = document.getElementById('play-pause-button');
+const playIcon = document.getElementById('play-icon');
+const pauseIcon = document.getElementById('pause-icon');
+const replayIcon = document.getElementById('replay-icon');
+const storyProgress = document.getElementById('story-progress');
+const progressBarContainer = document.getElementById('progress-bar-container');
+const backButton = document.getElementById('back-button');
+
+const quizButton = document.getElementById('quiz-button');
+const quizContainer = document.getElementById('quiz-container');
+const quizContent = document.getElementById('quiz-content');
+const loadingQuiz = document.getElementById('loading-quiz');
+const questionDisplay = document.getElementById('question-display');
+const questionText = document.getElementById('question-text');
+const optionsContainer = document.getElementById('options-container');
+const quizFeedback = document.getElementById('quiz-feedback');
+const quizResults = document.getElementById('quiz-results');
+const scoreText = document.getElementById('score-text');
+const retakeQuizButton = document.getElementById('retake-quiz-button');
+
+const toggleChatSizeButton = document.getElementById('toggle-chat-size');
+const expandIcon = document.getElementById('expand-icon');
+const collapseIcon = document.getElementById('collapse-icon');
+const body = document.body;
+
+let isChatToggled = false;
+let lastPage = null; // New state variable to track the previous page
+
+let isThinking = false;
+let isChatWindowOpen = false;
+let isPaused = false;
+let currentWordIndex = 0;
+let storyWords = [];
+let storyAnimationTimeout;
+let isScrubbing = false;
+
+let quizQuestions = [];
+let currentQuestionIndex = 0;
+let score = 0;
+
+// New Audio element
+const audioPlayer = new Audio();
+let audioPlaylist = [];
+let currentAudioIndex = 0;
+
+const DEFAULT_BG_URL = "ChatGPT Image Aug 23, 2025, 01_44_51 AM.png";
+
+// Main data structure for all seven Kandas with placeholder background images
+const ramayanaData = {
+"Bālakāṇḍa (बालकाण्ड)": { title: "Childhood of Lord Rama", story: "This is the placeholder story for Bālakāṇḍa (बालकाण्ड). The story of the Ramayana begins here with the birth of Lord Rama and his brothers, their education, and his marriage to Sita. Please select one of the sub-parts of the Sundarakāṇḍa chapter to see a full story.", bgImage: "https://placehold.co/1920x1080/282218/FCD34D?text=Balakanda" },
+"Ayodhyākāṇḍa (अयोध्याकाण्ड)": { title: "Life in Ayodhya and exile of Rama", story: "This is the placeholder story for Ayodhyākāṇḍa (अयोध्याकाण्ड). This chapter details the preparations for Rama’s coronation, his subsequent exile, and the departure to the forest with Sita and Lakshmana. Please select one of the sub-parts of the Sundarakāṇḍa chapter to see a full story.", bgImage: "https://placehold.co/1920x1080/282218/FCD34D?text=Ayodhyakanda" },
+"Araṇyakāṇḍa (अरण्यकाण्ड)": { title: "Rama’s life in the forest, abduction of Sita", story: "This is the placeholder story for Araṇyakāṇḍa (अरण्यकाण्ड). It describes Rama's life in the forest with Sita and Lakshmana, their encounters with various sages and demons, and the pivotal event of Sita's abduction by Ravana. Please select one of the sub-parts of the Sundarakāṇḍa chapter to see a full story.", bgImage: "https://placehold.co/1920x1080/282218/FCD34D?text=Aranyakanda" },
+"Kiṣkindhākāṇḍa (किष्किन्धाकाण्ड)": { title: "Alliance with Sugriva and Hanuman’s role", story: "This is the placeholder story for Kiṣkindhākāṇḍa (किष्किन्धाकाण्ड). This chapter focuses on Rama's meeting with the monkey-king Sugriva and Hanuman, forming an alliance to find Sita and reclaim his kingdom. Please select one of the sub-parts of the Sundarakāṇḍa chapter to see a full story.", bgImage: "https://placehold.co/1920x1080/282218/FCD34D?text=Kishkindhakanda" },
+"Sundarakāṇḍa (सुन्दरकाण्ड)": {
+"Title": "Hanuman’s journey to Lanka, search for Sita",
+"parts": {
+"Part 1": {
+"Title": "Conquering Obstacles",
+"Sargas": "1 to 1",
+"Total_Sargas": 1,
+"bgImage": "bg/Conquering Obstacles.png",
+"audio_files": ["audio/1/sunderkand_part_1a.wav","audio/1/sunderkand_part_1b.wav"] // Assuming this new format
+},
+"Part 2": {
+"Title": "The Radiant Realm of Ravana's Residence",
+"Sargas": "2 to 8",
+"Total_Sargas": 7,
+"bgImage": "bg/The Radiant Realm of Ravana's Residence.png",
+"audio_files": ["audio/2/part_2a.mp3"]
+},
+"Part 3": {
+"Title": "Despondency and Renewed Resolve",
+"Sargas": "9 to 12",
+"Total_Sargas": 4,
+"bgImage": "bg/Despondency and Renewed Resolve.png"
+},
+"Part 4": {
+"Title": "Despair and Devotion",
+"Sargas": "13 to 17",
+"Total_Sargas": 5,
+"bgImage": "bg/Despair and Devotion.png"
+},
+"Part 5": {
+"Title": "The Ogresses' Menace",
+"Sargas": "18 to 24",
+"Total_Sargas": 7,
+"bgImage": "bg/The Ogresses' Menace.png"
+},
+"Part 6": {
+"Title": "The Messenger of Hope: Hanuman's Encounter with Sita",
+"Sargas": "25 to 32",
+"Total_Sargas": 8,
+"bgImage": "bg/The Messenger of Hope Hanuman's Encounter with Sita.png"
+},
+"Part 7": {
+"Title": "Rama's Unwavering Love and Sita's Hope",
+"Sargas": "33 to 36",
+"Total_Sargas": 4,
+"bgImage": "bg/Rama's Unwavering Love and Sita's Hope.png"
+},
+"Part 8": {
+"Title": "The Warrior's Resolve: Confronting Fear and Destruction",
+"Sargas": "37 to 41",
+"Total_Sargas": 5,
+"bgImage": "bg/The Warrior's Resolve Confronting Fear and Destruction.png"
+},
+"Part 9": {
+"Title": "The Battle of Wits and Strength",
+"Sargas": "42 to 48",
+"Total_Sargas": 7,
+"bgImage": "bg/The Battle of Wits and Strength.png"
+},
+"Part 10": {
+"Title": "The Fiery Guardian of Virtue",
+"Sargas": "49 to 55",
+"Total_Sargas": 7,
+"bgImage": "bg/The Fiery Guardian of Virtue.png"
+},
+"Part 11": {
+"Title": "Hanuman's Oceanic Leap",
+"Sargas": "56 to 57",
+"Total_Sargas": 2,
+"bgImage": "bg/Hanuman's Oceanic Leap.png"
+},
+"Part 12": {
+"Title": "The March to Victory: Hanuman's Quest and the Vanaras' Antics",
+"Sargas": "58 to 61",
+"Total_Sargas": 4,
+"bgImage": "bg/The March to Victory Hanuman's Quest and the Vanaras' Antics.png"
+},
+"Part 13": {
+"Title": "Rama's Tears and Hanuman's Words",
+"Sargas": "62 to 68",
+"Total_Sargas": 7,
+"bgImage": "bg/Rama's Tears and Hanuman's Words.png"
+}
+
+}
+},
+"Yuddhakāṇḍa (युद्धकाण्ड)": { title: "The great war with Ravana", story: "This is the placeholder story for Yuddhakāṇḍa (युद्धकाण्ड). This is the climactic chapter describing the great war between Rama's army and Ravana's demon forces in Lanka, culminating in the defeat of Ravana. Please select one of the sub-parts of the Sundarakāṇḍa chapter to see a full story.", bgImage: "https://placehold.co/1920x1080/282218/FCD34D?text=Yuddhakanda" },
+"Uttarakāṇḍa (उत्तरकाण्ड)": { title: "Later life of Rama, banishment of Sita, and conclusion", story: "This is the placeholder story for Uttarakāṇḍa (उत्तरकाण्ड). This chapter concludes the epic, detailing Rama’s reign as king, the banishment of Sita, the birth of his sons, Lava and Kusha, and the final reunion of the divine couple. Please select one of the sub-parts of the Sundarakāṇḍa chapter to see a full story.", bgImage: "https://placehold.co/1920x1080/282218/FCD34D?text=Uttarakanda" }
+};
+
+// Function to fetch and display the main chapters
+const fetchAndDisplayChapters = async () => {
+// Reset background to default
+body.style.backgroundImage = `url("${DEFAULT_BG_URL}")`;
+loadingChapters.style.display = 'flex';
+chaptersList.innerHTML = '';
+backButton.classList.add('hidden'); // Hide back button on main page
+lastPage = null; // Reset lastPage
+// Revert the grid layout to the original 2 columns for the main chapters
+chaptersList.classList.remove('md:grid-cols-3');
+chaptersList.classList.add('md:grid-cols-2');
+
+// Revert max-width to original for the chapter container
+chapterContainer.classList.remove('max-w-6xl');
+chapterContainer.classList.add('max-w-2xl');
+chapterContainer.classList.remove('px-4');
+chapterContainer.classList.add('px-8');
+
+for (const kandaName in ramayanaData) {
+if (ramayanaData.hasOwnProperty(kandaName)) {
+const kandaData = ramayanaData[kandaName];
+const chapterButton = document.createElement('button');
+chapterButton.textContent = kandaName;
+chapterButton.classList.add('w-full', 'py-4', 'px-6', 'text-xl', 'text-[#FCD34D]', 'bg-black', 'bg-opacity-30', 'backdrop-blur-sm', 'rounded-xl', 'border-2', 'border-[#D5A76E]', 'shadow-lg', 'hover:bg-[#D5A76E]', 'hover:text-black', 'transition-colors', 'duration-300');
+
+chapterButton.addEventListener('click', () => {
+if (kandaName === "Sundarakāṇḍa (सुन्दरकाण्ड)") {
+lastPage = 'kandas';
+displaySunderkandParts();
+} else {
+lastPage = 'kandas';
+displayPlaceholderStory(kandaData);
+}
+});
+chaptersList.appendChild(chapterButton);
+}
+}
+loadingChapters.style.display = 'none';
+};
+
+// Function to display the sub-parts of Sunderkand
+const displaySunderkandParts = () => {
+body.style.backgroundImage = `url("${DEFAULT_BG_URL}")`;
+chaptersList.innerHTML = '';
+backButton.classList.remove('hidden'); // Show back button when on sub-parts page
+lastPage = 'kandas'; // Set lastPage for the back button to navigate to
+// Change the grid layout to 3 columns and wider container
+chaptersList.classList.remove('md:grid-cols-2');
+chaptersList.classList.add('md:grid-cols-3');
+
+chapterContainer.classList.remove('max-w-2xl');
+chapterContainer.classList.add('max-w-6xl');
+chapterContainer.classList.remove('px-8');
+chapterContainer.classList.add('px-4');
+
+const parts = ramayanaData["Sundarakāṇḍa (सुन्दरकाण्ड)"].parts;
+for (const partKey in parts) {
+if (parts.hasOwnProperty(partKey)) {
+const partData = parts[partKey];
+const partButton = document.createElement('button');
+partButton.innerHTML = `
+<div class="text-xl font-bold">${partKey}: ${partData.Title}</div>
+<div class="text-sm font-light">Sargas ${partData.Sargas}</div>
+`;
+partButton.classList.add('w-full', 'py-4', 'px-6', 'text-xl', 'text-[#FCD34D]', 'bg-black', 'bg-opacity-30', 'backdrop-blur-sm', 'rounded-xl', 'border-2', 'border-[#D5A76E]', 'shadow-lg', 'hover:bg-[#D5A76E]', 'hover:text-black', 'transition-colors', 'duration-300', 'text-left', 'flex', 'flex-col', 'items-start');
+
+// UPDATED: Now calls a new function to fetch and show the story
+partButton.addEventListener('click', () => {
+lastPage = 'sunderkand_parts';
+fetchAndShowSunderkandPart(partKey, partData);
+});
+chaptersList.appendChild(partButton);
+}
+}
+};
+
+// New function to fetch and show the story for a Sunderkand part
+const fetchAndShowSunderkandPart = async (partKey, partData) => {
+// Show UI elements for story
+chapterContainer.style.display = 'none';
+storyContainer.classList.remove('hidden');
+chatContainer.classList.remove('hidden');
+backButton.classList.remove('hidden');
+
+storyContainer.classList.add('fade-slide-in');
+chatContainer.classList.add('fade-slide-in');
+
+storyTitle.textContent = partData.Title;
+storyContent.innerHTML = '';
+loadingStory.style.display = 'flex';
+
+// Set background image
+body.style.backgroundImage = `url("${partData.bgImage}")`;
+
+let formattedStory = "An error occurred while loading the story.";
+try {
+const response = await fetch(`json\sunderkand_part_${partKey.replace('Part ', '')}.json`);
+if (!response.ok) {
+throw new Error(`HTTP error! status: ${response.status}`);
+}
+const data = await response.json();
+
+let storyContentString = '';
+
+// Append the overview first
+if (data.overview) {
+  storyContentString += `<p class="mb-4"><b>Overview:</b> ${data.overview}</p><hr class="border-[#D5A76E] my-4">`;
+}
+
+// Then, iterate through shlokas and their stories
+for (const key in data) {
+  if (key.startsWith('shloka_')) {
+    const shlokaData = data[key];
+    const storyKey = key.replace('shloka_', 'story_');
+    const storyData = data[storyKey];
+
+    // Append shloka details
+    storyContentString += `
+      <div class="my-6">
+        <p><b>Shloka: ${shlokaData.identifier}</b></p>
+        <p class="mb-2">${shlokaData.text}</p>
+        <p><b>Meaning:</b> ${shlokaData.meaning}</p>
+      </div>
+    `;
+
+    // Append the story as a single paragraph with <br> for line breaks
+    if (storyData && Array.isArray(storyData)) {
+      storyContentString += `<p>${storyData.join(' ')}</p>`; // Corrected to join with space for a paragraph
+    }
+  }
+}
+
+formattedStory = storyContentString;
+audioPlaylist = partData.audio_files || [];
+currentAudioIndex = 0;
+
+} catch (error) {
+console.error("Failed to load story:", error);
+} finally {
+loadingStory.style.display = 'none';
+storyContent.innerHTML = formattedStory;
+}
+
+// Dynamically load audio and show controls
+loadAudioForSubchapter();
+
+};
+
+const loadAudioForSubchapter = () => {
+  if (audioPlaylist.length > 0) {
+    audioPlayer.src = audioPlaylist[currentAudioIndex];
+    playPauseButton.classList.remove('hidden');
+    progressBarContainer.classList.remove('hidden');
+
+    audioPlayer.load();
+    audioPlayer.play().catch(e => console.error("Audio playback failed:", e));
+    isPaused = false;
+    playIcon.classList.add('hidden');
+    pauseIcon.classList.remove('hidden');
+    replayIcon.classList.add('hidden');
+  } else {
+    // If no audio, hide controls
+    playPauseButton.classList.add('hidden');
+    progressBarContainer.classList.add('hidden');
+  }
+};
+
+audioPlayer.addEventListener('timeupdate', () => {
+  if (!audioPlayer.paused) {
+    const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+    storyProgress.style.width = `${progress}%`;
+  }
+});
+
+audioPlayer.addEventListener('ended', () => {
+  currentAudioIndex++;
+  if (currentAudioIndex < audioPlaylist.length) {
+    loadAudioForSubchapter();
+  } else {
+    // All audio files have played
+    playIcon.classList.add('hidden');
+    pauseIcon.classList.add('hidden');
+    replayIcon.classList.remove('hidden');
+    storyProgress.style.width = '100%';
+  }
+});
+
+
+// New function to display a placeholder story with animation
+const displayPlaceholderStory = (kandaData) => {
+  // Show playback controls for animated stories
+  playPauseButton.classList.remove('hidden');
+  progressBarContainer.classList.remove('hidden');
+
+  showStory({
+    title: kandaData.title,
+    story: kandaData.story,
+    bgImage: kandaData.bgImage
+  });
+};
+
+const showStory = (storyData) => {
+clearTimeout(storyAnimationTimeout);
+isPaused = false;
+currentWordIndex = 0;
+storyContent.innerHTML = '';
+storyProgress.style.width = '0%';
+playIcon.classList.add('hidden');
+pauseIcon.classList.remove('hidden');
+replayIcon.classList.add('hidden');
+
+chapterContainer.style.display = 'none';
+storyContainer.classList.remove('hidden');
+chatContainer.classList.remove('hidden');
+backButton.classList.remove('hidden');
+
+// Set the new background image, if available
+if (storyData.bgImage) {
+body.style.backgroundImage = `url("${storyData.bgImage}")`;
+}
+
+storyContainer.classList.add('fade-slide-in');
+chatContainer.classList.add('fade-slide-in');
+
+storyTitle.textContent = storyData.title;
+loadAnimatedStory(storyData.story); // Use the animated story loader
+};
+
+const resetStoryState = () => {
+  clearTimeout(storyAnimationTimeout);
+  if (!audioPlayer.paused) {
+    audioPlayer.pause();
+    audioPlayer.currentTime = 0;
+  }
+  isPaused = true;
+  currentWordIndex = 0;
+  storyWords = [];
+  storyContent.innerHTML = '';
+  storyProgress.style.width = '0%';
+  playIcon.classList.remove('hidden');
+  pauseIcon.classList.add('hidden');
+  replayIcon.classList.add('hidden');
+  chatMessages.innerHTML = '<div class="mb-2 p-3 bg-black bg-opacity-60 text-white rounded-lg self-start">Hello, ask me anything about the Ramayana!</div>';
+  isChatWindowOpen = false;
+
+  // Hide the containers
+  storyContainer.classList.add('hidden');
+  chatContainer.classList.add('hidden');
+};
+
+const handleBackButton = () => {
+  resetStoryState();
+  quizContainer.classList.add('hidden');
+  chapterContainer.style.display = 'block';
+
+  if (lastPage === 'sunderkand_parts') {
+    displaySunderkandParts();
+  } else if (lastPage === 'kandas' || lastPage === 'quiz') {
+    fetchAndDisplayChapters();
+  }
+};
+
+const loadAnimatedStory = (storyText) => {
+storyWords = storyText.split(' ');
+storyContent.innerHTML = '';
+currentWordIndex = 0;
+storyProgress.style.width = '0%';
+playIcon.classList.add('hidden');
+pauseIcon.classList.remove('hidden');
+replayIcon.classList.add('hidden');
+isPaused = false;
+playPauseButton.classList.remove('hidden');
+progressBarContainer.classList.remove('hidden');
+
+storyWords.forEach((word) => {
+const span = document.createElement('span');
+span.innerHTML = word + " "; // Use innerHTML to render bold and br tags
+span.classList.add('word-anim');
+storyContent.appendChild(span);
+});
+playStoryAnimation();
+};
+
+const playStoryAnimation = () => {
+if (isPaused || isScrubbing) return;
+if (currentWordIndex >= storyWords.length) {
+playIcon.classList.add('hidden');
+pauseIcon.classList.add('hidden');
+replayIcon.classList.remove('hidden');
+return;
+}
+
+const wordSpan = storyContent.children[currentWordIndex];
+if (wordSpan) {
+wordSpan.classList.add('show');
+storyContent.scrollTop = wordSpan.offsetTop - storyContent.offsetTop;
+const progress = (currentWordIndex + 1) / storyWords.length * 100;
+storyProgress.style.width = `${progress}%`;
+currentWordIndex++;
+storyAnimationTimeout = setTimeout(playStoryAnimation, 50);
+}
+};
+
+const togglePlayPause = () => {
+if (!playPauseButton.classList.contains('hidden')) {
+  // For animated stories
+  if (storyWords.length > 0) {
+    if (currentWordIndex >= storyWords.length) {
+      currentWordIndex = 0;
+      isPaused = false;
+      storyProgress.style.width = '0%';
+      Array.from(storyContent.children).forEach(span => span.classList.remove('show'));
+      playIcon.classList.add('hidden');
+      pauseIcon.classList.remove('hidden');
+      replayIcon.classList.add('hidden');
+      setTimeout(() => {
+        playStoryAnimation();
+      }, 1000);
+    } else {
+      isPaused = !isPaused;
+      if (isPaused) {
+        clearTimeout(storyAnimationTimeout);
+        playIcon.classList.remove('hidden');
+        pauseIcon.classList.add('hidden');
+      } else {
+        playIcon.classList.add('hidden');
+        pauseIcon.classList.remove('hidden');
+        playStoryAnimation();
+      }
+    }
+  } else {
+    // For audio stories
+    if (audioPlayer.paused) {
+      audioPlayer.play();
+      playIcon.classList.add('hidden');
+      pauseIcon.classList.remove('hidden');
+    } else {
+      audioPlayer.pause();
+      playIcon.classList.remove('hidden');
+      pauseIcon.classList.add('hidden');
+    }
+    // Handle replay logic
+    if (audioPlayer.currentTime >= audioPlayer.duration) {
+      audioPlayer.currentTime = 0;
+      audioPlayer.play();
+      replayIcon.classList.add('hidden');
+      pauseIcon.classList.remove('hidden');
+    }
+  }
+}
+};
+
+const scrubStory = (e) => {
+const progressBarRect = progressBarContainer.getBoundingClientRect();
+let clientX = e.clientX;
+if (e.touches && e.touches[0]) {
+clientX = e.touches[0].clientX;
+}
+
+const scrubX = Math.max(0, Math.min(clientX - progressBarRect.left, progressBarRect.width));
+const percentage = scrubX / progressBarRect.width;
+const newTime = percentage * audioPlayer.duration;
+audioPlayer.currentTime = newTime;
+
+const newWordIndex = Math.floor(percentage * storyWords.length);
+storyProgress.style.width = `${percentage * 100}%`;
+currentWordIndex = newWordIndex;
+
+Array.from(storyContent.children).forEach((span, index) => {
+if (index < newWordIndex) {
+span.classList.add('show');
+} else {
+span.classList.remove('show');
+}
+});
+
+if (storyContent.children[newWordIndex]) {
+storyContent.scrollTop = storyContent.children[newWordIndex].offsetTop - storyContent.offsetTop;
+}
+};
+
+const handleScrubStart = (e) => {
+  e.preventDefault();
+  isScrubbing = true;
+  if (!playPauseButton.classList.contains('hidden')) {
+    if (storyWords.length > 0) {
+       clearTimeout(storyAnimationTimeout);
+       playIcon.classList.remove('hidden');
+       pauseIcon.classList.add('hidden');
+    } else if (audioPlayer) {
+      audioPlayer.pause();
+      playIcon.classList.remove('hidden');
+      pauseIcon.classList.add('hidden');
+    }
+  }
+};
+
+const handleScrubMove = (e) => {
+  if (isScrubbing) {
+    if (storyWords.length > 0) {
+      const progressBarRect = progressBarContainer.getBoundingClientRect();
+      let clientX = e.clientX;
+      if (e.touches && e.touches[0]) {
+        clientX = e.touches[0].clientX;
+      }
+      const scrubX = Math.max(0, Math.min(clientX - progressBarRect.left, progressBarRect.width));
+      const percentage = scrubX / progressBarRect.width;
+      const newWordIndex = Math.floor(percentage * storyWords.length);
+      storyProgress.style.width = `${percentage * 100}%`;
+      currentWordIndex = newWordIndex;
+      Array.from(storyContent.children).forEach((span, index) => {
+        if (index < newWordIndex) {
+          span.classList.add('show');
+        } else {
+          span.classList.remove('show');
+        }
+      });
+      if (storyContent.children[newWordIndex]) {
+        storyContent.scrollTop = storyContent.children[newWordIndex].offsetTop - storyContent.offsetTop;
+      }
+    } else if (audioPlayer) {
+      const progressBarRect = progressBarContainer.getBoundingClientRect();
+      let clientX = e.clientX;
+      if (e.touches && e.touches[0]) {
+        clientX = e.touches[0].clientX;
+      }
+      const scrubX = Math.max(0, Math.min(clientX - progressBarRect.left, progressBarRect.width));
+      const percentage = scrubX / progressBarRect.width;
+      const newTime = percentage * audioPlayer.duration;
+      audioPlayer.currentTime = newTime;
+    }
+  }
+};
+
+const handleScrubEnd = () => {
+  isScrubbing = false;
+  if (!isPaused) {
+    if (storyWords.length > 0) {
+      playIcon.classList.add('hidden');
+      pauseIcon.classList.remove('hidden');
+      playStoryAnimation();
+    } else if (audioPlayer) {
+      audioPlayer.play();
+      playIcon.classList.add('hidden');
+      pauseIcon.classList.remove('hidden');
+    }
+  }
+};
+
+const createMessageElement = (text, sender) => {
+const messageDiv = document.createElement('div');
+messageDiv.classList.add('mb-2', 'p-3', 'rounded-lg', 'max-w-[80%]');
+if (sender === 'user') {
+messageDiv.classList.add('bg-[#A3591B]', 'text-white', 'self-end', 'ml-auto');
+} else {
+messageDiv.classList.add('bg-black', 'bg-opacity-60', 'text-white', 'self-start');
+}
+messageDiv.textContent = text;
+return messageDiv;
+};
+
+const sendMessage = async () => {
+  const userMessage = chatInput.value.trim();
+  if (userMessage === '' || isThinking) return;
+
+  isThinking = true;
+  const userMessageElement = createMessageElement(userMessage, 'user');
+  chatMessages.appendChild(userMessageElement);
+  chatInput.value = '';
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+
+  // Define the API endpoint for your Python backend
+  const API_ENDPOINT = 'http://localhost:5000/chat';
+
+  try {
+      const response = await fetch(API_ENDPOINT, {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+              user_message: userMessage,
+              story_content: storyContent.textContent.trim()
+          })
+      });
+
+      if (!response.ok) {
+          throw new Error(`API response was not ok. Status: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      let botResponseText = data.message;
+      if (data.citations && data.citations.length > 0) {
+        botResponseText += "\n\nSources:\n" + data.citations.map(c => `- ${c}`).join('\n');
+      }
+
+      const botMessageElement = createMessageElement(botResponseText, 'model');
+      chatMessages.appendChild(botMessageElement);
+
+  } catch (error) {
+      console.error("Failed to fetch response:", error);
+      const errorMessage = "Sorry, I couldn't get an answer from the epic's knowledge. Please try again.";
+      const errorElement = createMessageElement(errorMessage, 'model');
+      chatMessages.appendChild(errorElement);
+  } finally {
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      isThinking = false;
+  }
+};
+
+const showChat = () => {
+if (!isChatWindowOpen) {
+chatContainer.classList.remove('translate-x-full', 'hidden');
+isChatWindowOpen = true;
+}
+};
+
+const toggleChatSize = () => {
+isChatToggled = !isChatToggled;
+chatContainer.classList.toggle('chat-70-percent', isChatToggled);
+if (isChatToggled) {
+expandIcon.classList.add('hidden');
+collapseIcon.classList.remove('hidden');
+} else {
+expandIcon.classList.remove('hidden');
+collapseIcon.classList.add('hidden');
+}
+chatMessages.scrollTop = chatMessages.scrollHeight;
+};
+
+// Quiz Functions
+const showQuizPage = () => {
+  lastPage = 'quiz';
+  chapterContainer.style.display = 'none';
+  storyContainer.classList.add('hidden');
+  quizContainer.classList.remove('hidden');
+  backButton.classList.remove('hidden');
+  chatContainer.classList.add('hidden');
+
+  loadQuiz();
+};
+
+const loadQuiz = async () => {
+  loadingQuiz.style.display = 'flex';
+  questionDisplay.classList.add('hidden');
+  quizResults.classList.add('hidden');
+
+  try {
+    const response = await fetch('quiz.json');
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    quizQuestions = data.Questions;
+
+    currentQuestionIndex = 0;
+    score = 0;
+
+    loadingQuiz.style.display = 'none';
+    questionDisplay.classList.remove('hidden');
+    displayQuestion();
+  } catch (error) {
+    console.error("Failed to load quiz:", error);
+    loadingQuiz.textContent = "Failed to load quiz. Please check the 'quiz.json' file.";
+  }
+};
+
+const displayQuestion = () => {
+  optionsContainer.innerHTML = '';
+  quizFeedback.textContent = '';
+
+  if (currentQuestionIndex >= quizQuestions.length) {
+    showResults();
+    return;
+  }
+
+  const question = quizQuestions[currentQuestionIndex];
+  questionText.innerHTML = `${question.question_en}<br><span class="text-base font-normal">${question.question_sa}</span>`;
+
+  question.options_en.forEach((option, index) => {
+    const optionButton = document.createElement('button');
+    optionButton.innerHTML = `${option}<br><span class="text-sm font-light">${question.options_sa[index]}</span>`;
+    optionButton.classList.add('option-button', 'text-left');
+    optionButton.addEventListener('click', () => checkAnswer(option, question.answer_en, optionButton));
+    optionsContainer.appendChild(optionButton);
+  });
+};
+
+const checkAnswer = (selectedOption, correctAnswer, button) => {
+  const isCorrect = selectedOption === correctAnswer;
+  if (isCorrect) {
+    score++;
+    quizFeedback.textContent = "Correct!";
+    button.classList.add('correct');
+  } else {
+    const currentQuestion = quizQuestions[currentQuestionIndex];
+    quizFeedback.innerHTML = `Incorrect! The correct answer was: ${currentQuestion.answer_en}<br>(${currentQuestion.answer_sa})`;
+    button.classList.add('incorrect');
+    // Highlight the correct answer
+    Array.from(optionsContainer.children).forEach((btn, index) => {
+      if (currentQuestion.options_en[index] === correctAnswer) {
+        btn.classList.add('correct');
+      }
+    });
+  }
+
+  // Disable all buttons after an answer is selected
+  Array.from(optionsContainer.children).forEach(btn => btn.disabled = true);
+
+  setTimeout(() => {
+    currentQuestionIndex++;
+    displayQuestion();
+  }, 2500); // Increased timeout to read both languages
+};
+
+const showResults = () => {
+  questionDisplay.classList.add('hidden');
+  quizResults.classList.remove('hidden');
+  scoreText.textContent = `You scored ${score} out of ${quizQuestions.length}.`;
+};
+
+const retakeQuiz = () => {
+  quizResults.classList.add('hidden');
+  loadQuiz();
+};
+
+// Event Listeners
+sendButton.addEventListener('click', () => { showChat(); sendMessage(); });
+chatInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') { showChat(); sendMessage(); }});
+chatInput.addEventListener('focus', showChat);
+playPauseButton.addEventListener('click', togglePlayPause);
+backButton.addEventListener('click', handleBackButton); // Using the new handler
+toggleChatSizeButton.addEventListener('click', toggleChatSize);
+quizButton.addEventListener('click', showQuizPage);
+retakeQuizButton.addEventListener('click', retakeQuiz);
+
+progressBarContainer.addEventListener('mousedown', handleScrubStart);
+progressBarContainer.addEventListener('touchstart', handleScrubStart);
+window.addEventListener('mousemove', handleScrubMove);
+window.addEventListener('touchmove', handleScrubMove);
+window.addEventListener('mouseup', handleScrubEnd);
+window.addEventListener('touchend', handleScrubEnd);
+
+fetchAndDisplayChapters();
+})();
+</script>
+
+</body>
+</html>
