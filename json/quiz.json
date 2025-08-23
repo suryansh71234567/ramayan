@@ -1,0 +1,355 @@
+{
+  "Questions": [
+    {
+      "question_id": "01",
+      "question_en": "Who was sent to Lanka in the Sundara Kanda to search for Sita?",
+      "question_sa": "सुन्दरकाण्डे सीतायाः अन्वेषणायः कः लङ्कां प्रेषितः?",
+      "options_en": ["Rama", "Lakshmana", "Hanuman", "Sugriva"],
+      "options_sa": ["रामः", "लक्ष्मणः", "हनुमान्", "सुग्रीवः"],
+      "answer_en": "Hanuman",
+      "answer_sa": "हनुमान्",
+      "difficulty": "Easy"
+    },
+    {
+      "question_id": "02",
+      "question_en": "Who gave the ring of Rama to Hanuman for identification?",
+      "question_sa": "रामस्य मुद्रिकां हनूमते परिचयार्थं कः दत्तवान्?",
+      "options_en": ["Sugriva", "Lakshmana", "Rama", "Vibhishana"],
+      "options_sa": ["सुग्रीवः", "लक्ष्मणः", "रामः", "विभीषणः"],
+      "answer_en": "Rama",
+      "answer_sa": "रामः",
+      "difficulty": "Easy"
+    },
+    {
+      "question_id": "03",
+      "question_en": "On which mountain did Hanuman leap across the ocean?",
+      "question_sa": "हनुमान् कस्य पर्वतस्य उपरि स्थित्वा सागरं लङ्घितवान्?",
+      "options_en": ["Rishyamukha", "Mahendra", "Kailasa", "Chitrakuta"],
+      "options_sa": ["ऋश्यमुखः", "महेन्द्रः", "कैलासः", "चित्रकूटः"],
+      "answer_en": "Mahendra",
+      "answer_sa": "महेन्द्रः",
+      "difficulty": "Easy"
+    },
+    {
+      "question_id": "04",
+      "question_en": "Who tested Hanuman’s strength in the ocean by assuming the form of a mountain?",
+      "question_sa": "सागरमध्ये पर्वतस्वरूपं धृत्वा हनूमतः बलं कः परीक्षितवान्?",
+      "options_en": ["Mainaka", "Mandara", "Meru", "Himalaya"],
+      "options_sa": ["मैनाकः", "मन्दरः", "मेरुः", "हिमालयः"],
+      "answer_en": "Mainaka",
+      "answer_sa": "मैनाकः",
+      "difficulty": "Easy"
+    },
+    {
+      "question_id": "05",
+      "question_en": "Which demoness tried to swallow Hanuman in the ocean?",
+      "question_sa": "सागरमध्ये हनूमन्तं निगलितुं या राक्षसी प्रयतिता सा काऽभूत्?",
+      "options_en": ["Surasa", "Simhika", "Trijata", "Putana"],
+      "options_sa": ["सुरसा", "सिंहिका", "त्रिजटा", "पूतना"],
+      "answer_en": "Surasa",
+      "answer_sa": "सुरसा",
+      "difficulty": "Easy"
+    },
+    {
+      "question_id": "06",
+      "question_en": "Whom did Hanuman first meet in Lanka?",
+      "question_sa": "लङ्कायां प्रविश्य हनुमान् प्रथमं कं ददर्श ?",
+      "options_en": ["Mandodari", "Vibhishana", "Lankini", "Sita"],
+      "options_sa": ["मन्दोदरी", "विभीषणः", "लङ्किनी", "सीता"],
+      "answer_en": "Lankini",
+      "answer_sa": "लङ्किनी",
+      "difficulty": "Easy"
+    },
+    {
+      "question_id": "07",
+      "question_en": "Who was the demon-king ruling Lanka during Sundara Kanda?",
+      "question_sa": "सुन्दरकाण्डे लङ्कायाः राक्षसराजः कः आसीत्?",
+      "options_en": ["Kumbhakarna", "Vibhishana", "Ravana", "Indrajit"],
+      "options_sa": ["कुम्भकर्णः", "विभीषणः", "रावणः", "इन्द्रजित्"],
+      "answer_en": "Ravana",
+      "answer_sa": "रावणः",
+      "difficulty": "Easy"
+    },
+    {
+      "question_id": "08",
+      "question_en": "Who was Ravana’s virtuous brother who later joined Rama?",
+      "question_sa": "रावणस्य धर्मात्मा भ्राता यः पश्चात् रामं सेवे तस्य नाम किम्?",
+      "options_en": ["Kumbhakarna", "Indrajit", "Vibhishana", "Akampana"],
+      "options_sa": ["कुम्भकर्णः", "इन्द्रजित्", "विभीषणः", "अकम्पनः"],
+      "answer_en": "Vibhishana",
+      "answer_sa": "विभीषणः",
+      "difficulty": "Easy"
+    },
+    {
+      "question_id": "09",
+      "question_en": "Who was guarding Ashoka Vatika where Sita was kept?",
+      "question_sa": "अशोकवाटिकां रक्षति स्म, यत्र सीता आसीत्, सा का?",
+      "options_en": ["Trijata", "Mandodari", "Simhika", "Surasa"],
+      "options_sa": ["त्रिजटा", "मन्दोदरी", "सिंहिका", "सुरसा"],
+      "answer_en": "Trijata",
+      "answer_sa": "त्रिजटा",
+      "difficulty": "Easy"
+    },
+    {
+      "question_id": "10",
+      "question_en": "What did Hanuman give to Sita as proof of his identity?",
+      "question_sa": "हनुमान् स्वस्य परिचयस्य प्रमाणरूपेण सीतायै किं दत्तवान्?",
+      "options_en": ["A flower", "Rama’s ring", "Sugriva’s message", "Lakshmana’s bow"],
+      "options_sa": ["पुष्पम्", "रामस्य मुद्रिका", "सुग्रीवस्य सन्देशः", "लक्ष्मणस्य धनुः"],
+      "answer_en": "Rama’s ring",
+      "answer_sa": "रामस्य मुद्रिका",
+      "difficulty": "easy"
+    },
+    {
+      "question_id": "11",
+      "question_en": "Who consoled Sita in Ashoka Vatika with her dream of Rama’s victory?",
+      "question_sa": "अशोकवाटिकायाम् सीतां रामविजयस्वप्नेन या सान्त्वयत् सा का?",
+      "options_en": ["Mandodari", "Trijata", "Surasa", "Simhika"],
+      "options_sa": ["मन्दोदरी", "त्रिजटा", "सुरसा", "सिंहिका"],
+      "answer_en": "Trijata",
+      "answer_sa": "त्रिजटा",
+      "difficulty": "Easy"
+    },
+    {
+      "question_id": "12",
+      "question_en": "Which ornament did Sita give Hanuman as proof for Rama?",
+      "question_sa": "रामाय प्रमाणरूपेण सीतया हनूमते कः आभरणः दत्तः?",
+      "options_en": ["Anklet", "Chudamani", "Bracelet", "Earring"],
+      "options_sa": ["नूपुरः", "चूडामणिः", "कङ्कणम्", "कर्णाभरणम्"],
+      "answer_en": "Chudamani",
+      "answer_sa": "चूडामणिः",
+      "difficulty": "Easy"
+    },
+    {
+      "question_id": "13",
+      "question_en": "What did Hanuman burn in Lanka with his fiery tail?",
+      "question_sa": "हनूमतः दीप्तलाङ्गुलेन लङ्कायां किम् दग्धम्?",
+      "options_en": ["Ashoka Vatika", "Ravana’s palace", "Entire Lanka", "Mandodari’s chamber"],
+      "options_sa": ["अशोकवाटिका", "रावणस्य प्रासादः", "सम्पूर्णा लङ्का", "मन्दोदरीगृहम्"],
+      "answer_en": "Entire Lanka",
+      "answer_sa": "सम्पूर्णा लङ्का",
+      "difficulty": "Easy"
+    },
+    {
+      "question_id": "14",
+      "question_en": "Who praised Hanuman’s heroic acts after he returned from Lanka?",
+      "question_sa": "लङ्कातः आगत्य हनूमतः वीर्यकर्माणि के प्रशशंसुः?",
+      "options_en": ["Sugriva and Vanaras", "Rama and Lakshmana", "Ravana and Mandodari", "Indra and Surya"],
+      "options_sa": ["सुग्रीवः वानराश्च", "रामः लक्ष्मणश्च", "रावणः मन्दोदरी च", "इन्द्रः सूर्यश्च"],
+      "answer_en": "Sugriva and Vanaras",
+      "answer_sa": "सुग्रीवः वानराश्च",
+      "difficulty": "Easy"
+    },
+    {
+      "question_id": "15",
+      "question_en": "Who is the author of Sundara Kanda in Valmiki Ramayana?",
+      "question_sa": "वाल्मीकि-रामायणे सुन्दरकाण्डस्य कर्ता कः?",
+      "options_en": ["Vyasa", "Valmiki", "Kalidasa", "Tulsidas"],
+      "options_sa": ["व्यासः", "वाल्मीकि:", "कालिदासः", "तुलसीदासः"],
+      "answer_en": "Valmiki",
+      "answer_sa": "वाल्मीकि:",
+      "difficulty": "Easy"
+    },
+  {
+    "question_id": "16",
+    "question_en": "How did Hanuman reduce his size to enter Lanka?",
+    "question_sa": "लङ्कां प्रवेष्टुं हनुमान् किमर्थं स्वस्वरूपं लघूकृतवान्?",
+    "options_en": ["By chanting Rama’s name", "By his yogic power", "By receiving Indra’s blessing", "By Surya’s instruction"],
+    "options_sa": ["रामनामजपेन", "योगबलात्", "इन्द्रवरदानतः", "सूर्यस्य आज्ञया"],
+    "answer_en": "By his yogic power",
+    "answer_sa": "योगबलात्",
+    "difficulty": "medium"
+  },
+  {
+    "question_id": "17",
+    "question_en": "What was Hanuman’s initial thought upon seeing Sita in Ashoka Vatika?",
+    "question_sa": "अशोकवाटिकायां सीतां दृष्ट्वा हनुमतः प्रथमा भावना का आसीत्?",
+    "options_en": ["To reveal himself immediately", "To observe quietly", "To attack the guards", "To return to Rama at once"],
+    "options_sa": ["साक्षात् आत्मानं दर्शयितुम्", "शान्त्या निरीक्षितुम्", "रक्षिणः आक्रमितुम्", "रामस्य समीपं शीघ्रं गन्तुम्"],
+    "answer_en": "To observe quietly",
+    "answer_sa": "शान्त्या निरीक्षितुम्",
+    "difficulty": "medium"
+  },
+  {
+    "question_id": "18",
+    "question_en": "What was Sita’s reaction on seeing Hanuman?",
+    "question_sa": "हनूमन्तं दृष्ट्वा सीतायाः कः भावः अभवत्?",
+    "options_en": ["She doubted him", "She fainted", "She was overjoyed", "She became angry"],
+    "options_sa": ["संशयं कृतवती", "मूर्च्छिता", "आनन्दिता", "क्रुद्धा अभवत्"],
+    "answer_en": "She doubted him",
+    "answer_sa": "संशयं कृतवती",
+    "difficulty": "medium"
+  },
+  {
+    "question_id": "19",
+    "question_en": "What doubt did Sita initially have about Hanuman when she first saw him?",
+    "question_sa": "प्रथमं दृष्ट्वा हनूमन्तं सीतायाः का शङ्का आसीत्?",
+    "options_en": ["That he was Ravana in disguise", "That he was a monkey", "That he was Indra", "That he was an illusion"],
+    "options_sa": ["रावणस्य रूपवेशः", "वानरः", "इन्द्रः", "मायारूपः"],
+    "answer_en": "That he was Ravana in disguise",
+    "answer_sa": "रावणस्य रूपवेशः",
+    "difficulty": "medium"
+  },
+  {
+    "question_id": "20",
+    "question_en": "Who attempted to kill Hanuman when he was in Ravana’s court?",
+    "question_sa": "रावणस्य सभायां हनूमन्तं हन्तुं कः प्रयत्नवान्?",
+    "options_en": ["Kumbhakarna", "Indrajit", "Prahastha", "Ravana himself"],
+    "options_sa": ["कुम्भकर्णः", "इन्द्रजित्", "प्रहस्तः", "रावणः स्वयं"],
+    "answer_en": "Indrajit",
+    "answer_sa": "इन्द्रजित्",
+    "difficulty": "medium"
+  },
+  {
+    "question_id": "21",
+    "question_en": "Who suggested setting Hanuman’s tail on fire?",
+    "question_sa": "हनूमतः पुच्छं दग्धुं कः उपदिष्टवान्?",
+    "options_en": ["Prahastha", "Indrajit", "Ravana", "Vibhishana"],
+    "options_sa": ["प्रहस्तः", "इन्द्रजित्", "रावणः", "विभीषणः"],
+    "answer_en": "Ravana",
+    "answer_sa": "रावणः",
+    "difficulty": "medium"
+  },
+  {
+    "question_id": "22",
+    "question_en": "What did Hanuman advise Ravana when he first spoke in the court?",
+    "question_sa": "प्रथमं सभायां भाषमाणः हनूमान् रावणं किम् उपदिशत्?",
+    "options_en": ["To fight Rama bravely", "To surrender Sita to Rama", "To perform a yajna", "To leave Lanka"],
+    "options_sa": ["रामं वीर्येण योध्यम्", "रामाय सीतां दातुम्", "यज्ञं कर्तुम्", "लंका त्यक्तव्या"],
+    "answer_en": "To surrender Sita to Rama",
+    "answer_sa": "रामाय सीतां दातुम्",
+    "difficulty": "medium"
+  },
+  {
+    "question_id": "23",
+    "question_en": "How did Hanuman make himself visible to Sita in Ashoka Vatika?",
+    "question_sa": "हनूमान् अशोकवाटिकायां सीतायै आत्मानं कथं प्रकटितवान्?",
+    "options_en": ["By singing Rama’s glory", "By showing Rama’s ring", "By defeating demons", "By creating fire"],
+    "options_sa": ["रामस्य कीर्तिं गायतः", "रामस्य मुद्रिकां दर्शयन्", "राक्षसान् जित्वा", "अग्निं उत्पाद्य"],
+    "answer_en": "By showing Rama’s ring",
+    "answer_sa": "रामस्य मुद्रिकां दर्शयन्",
+    "difficulty": "medium"
+  },
+  {
+    "question_id": "24",
+    "question_en": "What did Sita request Hanuman not to do when he offered to carry her away?",
+    "question_sa": "हनूमता नीतुं यच्छता सीता किं निवृत्त्य प्रार्थयत्?",
+    "options_en": ["Not to fight Ravana", "Not to carry her without Rama", "Not to kill demons", "Not to burn Lanka"],
+    "options_sa": ["रावणं न योध्यम्", "रामं विना मां मा नय", "राक्षसान् मा हन्", "लंका मा दह"],
+    "answer_en": "Not to carry her without Rama",
+    "answer_sa": "रामं विना मां मा नय",
+    "difficulty": "medium"
+  },
+  {
+    "question_id": "25",
+    "question_en": "Which demoness tried to frighten Sita in Ashoka Vatika?",
+    "question_sa": "अशोकवाटिकायां सीतां त्रासयितुं का राक्षसी प्रयत्नवती?",
+    "options_en": ["Trijata", "Surpanakha", "Simhika", "Krodhavasha"],
+    "options_sa": ["त्रिजटा", "शूर्पणखा", "सिंहिका", "क्रोधवशा"],
+    "answer_en": "Krodhavasha",
+    "answer_sa": "क्रोधवशा",
+    "difficulty": "medium"
+  },
+  {
+    "question_id": "26",
+    "question_en": "Which weapon did Indrajit use to capture Hanuman?",
+    "question_sa": "हनूमतः ग्रहणाय इन्द्रजिदा कः अस्त्रः प्रयुक्तः?",
+    "options_en": ["Naga-pasha", "Brahmastra", "Agneyastra", "Varunastra"],
+    "options_sa": ["नागपाशः", "ब्रह्मास्त्रम्", "अग्नेयास्त्रम्", "वारुणास्त्रम्"],
+    "answer_en": "Brahmastra",
+    "answer_sa": "ब्रह्मास्त्रम्",
+    "difficulty": "medium"
+  },
+  {
+    "question_id": "27",
+    "question_en": "Which special power did Hanuman use to cross the ocean?",
+    "question_sa": "समुद्रं तीर्तुं हनूमान् का विशेषशक्तिः उपयुज्यत?",
+    "options_en": ["His strength", "His ability to fly", "His boon from Surya", "His illusionary power"],
+    "options_sa": ["तस्य बलम्", "तस्य गमनशक्ति:", "सूर्यस्य वरः", "मायाशक्ति:"],
+    "answer_en": "His ability to fly",
+    "answer_sa": "तस्य गमनशक्ति:",
+    "difficulty": "medium"
+  },
+  {
+    "question_id": "28",
+    "question_en": "What did Hanuman first assume before entering Lanka to avoid detection?",
+    "question_sa": "लङ्कां प्रविश्य निगूढः स्थातुं हनूमान् प्रथमं किं रूपं धारितवान्?",
+    "options_en": ["Cat", "Small monkey", "Brahmin", "Tiny form"],
+    "options_sa": ["मार्जारः", "लघुवानरः", "ब्राह्मणः", "सूक्ष्मरूपम्"],
+    "answer_en": "Tiny form",
+    "answer_sa": "सूक्ष्मरूपम्",
+    "difficulty": "Medium"
+  },
+  {
+    "question_id": "29",
+    "question_en": "What message did Hanuman convey from Rama to Sita?",
+    "question_sa": "रामस्य कः सन्देशः हनुमता सीतायै प्रदत्तः?",
+    "options_en": ["Victory is near", "He will come soon to rescue her", "Build a bridge", "Lakshmana is safe"],
+    "options_sa": ["जयः समीपे अस्ति", "सः शीघ्रं त्वामुद्धरिष्यति", "सेतुं निर्मास्यामः", "लक्ष्मणः सुरक्षितः"],
+    "answer_en": "He will come soon to rescue her",
+    "answer_sa": "सः शीघ्रं त्वामुद्धरिष्यति",
+    "difficulty": "Medium"
+  },
+  {
+    "question_id": "30",
+    "question_en": "How did Hanuman identify Sita in Ashoka Vatika?",
+    "question_sa": "अशोकवाटिकायां हनुमान् सीतां कथं ज्ञातवान्?",
+    "options_en": ["By her ornaments", "By her sorrowful state", "By Trijata’s help", "By her beauty"],
+    "options_sa": ["आभरणैः", "शोकारूपेण", "त्रिजटायाः साहाय्येन", "सौन्दर्येण"],
+    "answer_en": "By her sorrowful state",
+    "answer_sa": "शोकारूपेण",
+    "difficulty": "Medium"
+  },
+  {
+    "question_id": "31",
+    "question_en": "Who first informed Ravana that Hanuman had entered Lanka?",
+    "question_sa": "हनुमान् लङ्कां प्रविष्टवानिति प्रथमं रावणाय को निवेदितवान्?",
+    "options_en": ["Shurpanakha", "The guards", "The spies", "Lankini"],
+    "options_sa": ["शूर्पणखा", "रक्षिणः", "चराः", "लङ्किनी"],
+    "answer_en": "Lankini",
+    "answer_sa": "लङ्किनी",
+    "difficulty": "Medium"
+  },
+  {
+    "question_id": "32",
+    "question_en": "What promise did Sita give to Hanuman regarding her survival?",
+    "question_sa": "जीवने विषये सीतया हनुमते किं प्रतिज्ञातम्?",
+    "options_en": ["She would fast unto death", "She would wait for one month", "She would escape herself", "She would fight Ravana"],
+    "options_sa": ["अनशनं करिष्यामि", "एकमासं प्रतीक्ष्ये", "स्वयमेव पलायिष्ये", "रावणेन सह युद्धं करिष्यामि"],
+    "answer_en": "She would wait for one month",
+    "answer_sa": "एकमासं प्रतीक्ष्ये",
+    "difficulty": "Medium"
+  },
+  {
+    "question_id": "33",
+    "question_en": "What boon did Brahma grant that allowed Hanuman to remain bound only temporarily by Brahmastra?",
+    "question_sa": "ब्रह्मास्त्रेण केवलं क्षणिकं बद्धः इति हनुमतः कृते ब्रह्मणा कः वरः दत्तः?",
+    "options_en": ["Immunity to weapons", "Release from Brahmastra after respect", "Immortality", "Strength equal to Garuda"],
+    "options_sa": ["अस्त्रैः अभेद्यता", "ब्रह्मास्त्रात् आदरेण मोक्षः", "अमरत्वम्", "गरुडसमानं बलम्"],
+    "answer_en": "Release from Brahmastra after respect",
+    "answer_sa": "ब्रह्मास्त्रात् आदरेण मोक्षः",
+    "difficulty": "Medium"
+  },
+  {
+    "question_id": "34",
+    "question_en": "On which Mountain was the Lanka kingdom built?",
+    "question_sa": "कस्मिन् पर्वते लङ्काराज्यं निर्मितम् आसीत् ?",
+    "options_en": ["Krishnagiri", "Trikutagiri", "Mahendragiri", " Mount Sanjeevani"],
+    "options_sa": ["कृष्णगिरी", "त्रिकूटागिरि", "महेन्द्रगिरि", "संजीवनी पर्वत"],
+    "answer_en": "Trikutagiri",
+    "answer_sa": "त्रिकूटागिरि",
+    "difficulty": "Medium"
+  },
+  {
+    "question_id": "35",
+    "question_en": "Who reminded Hanuman about his strength?",
+    "question_sa": "हनुमते बलं केन स्मारयत् ?",
+    "options_en": ["Jambavan", "Rishyashringa", "Sugriva", "Angad"],
+    "options_sa": ["जाम्बवन", "ऋष्यश्रृङ्गः", "सुग्रीवः", "अङ्गदः"],
+    "answer_en": "Jambavan",
+    "answer_sa": "जाम्बवन",
+    "difficulty": "Medium"
+  }
+]
+}
+
