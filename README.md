@@ -121,6 +121,13 @@ Since the full text contains **24,000 shlokas**, due to time and computational c
 ---
 
 ## 📷 Demo (Screenshots / Video)  
-*(Add here once available)*  
+!(screenshots/Screenshot%202025-08-24%20033053.png)  
+
+!(screenshots/Screenshot%202025-08-24%20033138.png)  
+
+!(screenshots/Screenshot%202025-08-24%20033220.png)  
+
+!(screenshots/Screenshot%202025-08-24%20033310.png)  
+
 
 ---
