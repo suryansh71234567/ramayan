@@ -552,7 +552,7 @@ body.style.backgroundImage = `url("${partData.bgImage}")`;
 
 let formattedStory = "An error occurred while loading the story.";
 try {
-const response = await fetch(`sunderkand_part_${partKey.replace('Part ', '')}.json`);
+const response = await fetch(`json/sunderkand_part_${partKey.replace('Part ', '')}.json`);
 if (!response.ok) {
 throw new Error(`HTTP error! status: ${response.status}`);
 }
@@ -918,21 +918,52 @@ return messageDiv;
 };
 
 const sendMessage = async () => {
-const userMessage = chatInput.value.trim();
-if (userMessage === '' || isThinking) return;
-isThinking = true;
-const userMessageElement = createMessageElement(userMessage, 'user');
-chatMessages.appendChild(userMessageElement);
-chatInput.value = '';
-chatMessages.scrollTop = chatMessages.scrollHeight;
+  const userMessage = chatInput.value.trim();
+  if (userMessage === '' || isThinking) return;
 
-setTimeout(() => {
-const botResponse = "This is a sample response about the Ramayana.";
-const botMessageElement = createMessageElement(botResponse, 'model');
-chatMessages.appendChild(botMessageElement);
-chatMessages.scrollTop = chatMessages.scrollHeight;
-isThinking = false;
-}, 1000);
+  isThinking = true;
+  const userMessageElement = createMessageElement(userMessage, 'user');
+  chatMessages.appendChild(userMessageElement);
+  chatInput.value = '';
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+
+  // Define the API endpoint for your Python backend
+  const API_ENDPOINT = 'http://localhost:5000/chat';
+
+  try {
+      const response = await fetch(API_ENDPOINT, {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+              user_message: userMessage
+          })
+      });
+
+      if (!response.ok) {
+          throw new Error(`API response was not ok. Status: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      let botResponseText = data.message;
+      if (data.citations && data.citations.length > 0) {
+        botResponseText += "\n\nSources:\n" + data.citations.map(c => `- ${c}`).join('\n');
+      }
+
+      const botMessageElement = createMessageElement(botResponseText, 'model');
+      chatMessages.appendChild(botMessageElement);
+
+  } catch (error) {
+      console.error("Failed to fetch response:", error);
+      const errorMessage = "Sorry, I couldn't get an answer from the epic's knowledge. Please try again.";
+      const errorElement = createMessageElement(errorMessage, 'model');
+      chatMessages.appendChild(errorElement);
+  } finally {
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      isThinking = false;
+  }
 };
 
 const showChat = () => {
@@ -973,7 +1004,7 @@ const loadQuiz = async () => {
   quizResults.classList.add('hidden');
 
   try {
-    const response = await fetch('quiz.json');
+    const response = await fetch('json/quiz.json');
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
