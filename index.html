@@ -363,7 +363,7 @@ const DEFAULT_BG_URL = "bg/ChatGPT Image Aug 23, 2025, 01_44_51 AM.png";
 // Main data structure for all seven Kandas with placeholder background images
 const ramayanaData = {
 "Bālakāṇḍa (बालकाण्ड)": { title: "Childhood of Lord Rama", story: "This is the placeholder story for Bālakāṇḍa (बालकाण्ड). The story of the Ramayana begins here with the birth of Lord Rama and his brothers, their education, and his marriage to Sita. Please select one of the sub-parts of the Sundarakāṇḍa chapter to see a full story.", bgImage: "https://placehold.co/1920x1080/282218/FCD34D?text=Balakanda" },
-"Ayodhyākāṇḍa (अयोध्याकाण्ड)": { title: "Life in Ayodhya and exile of Rama", story: "This is the placeholder story for Ayodhyākāṇडा (अयोध्याकाण्ड). This chapter details the preparations for Rama’s coronation, his subsequent exile, and the departure to the forest with Sita and Lakshmana. Please select one of the sub-parts of the Sundarakāṇḍa chapter to see a full story.", bgImage: "https://placehold.co/1920x1080/282218/FCD34D?text=Ayodhyakanda" },
+"Ayodhyākāṇḍa (अयोध्याकाण्ड)": { title: "Life in Ayodhya and exile of Rama", story: "This is the placeholder story for Ayodhyākāṇḍa (अयोध्याकाण्ड). This chapter details the preparations for Rama’s coronation, his subsequent exile, and the departure to the forest with Sita and Lakshmana. Please select one of the sub-parts of the Sundarakāṇḍa chapter to see a full story.", bgImage: "https://placehold.co/1920x1080/282218/FCD34D?text=Ayodhyakanda" },
 "Araṇyakāṇḍa (अरण्यकाण्ड)": { title: "Rama’s life in the forest, abduction of Sita", story: "This is the placeholder story for Araṇyakāṇḍa (अरण्यकाण्ड). It describes Rama's life in the forest with Sita and Lakshmana, their encounters with various sages and demons, and the pivotal event of Sita's abduction by Ravana. Please select one of the sub-parts of the Sundarakāṇḍa chapter to see a full story.", bgImage: "https://placehold.co/1920x1080/282218/FCD34D?text=Aranyakanda" },
 "Kiṣkindhākāṇḍa (किष्किन्धाकाण्ड)": { title: "Alliance with Sugriva and Hanuman’s role", story: "This is the placeholder story for Kiṣkindhākāṇḍa (किष्किन्धाकाण्ड). This chapter focuses on Rama's meeting with the monkey-king Sugriva and Hanuman, forming an alliance to find Sita and reclaim his kingdom. Please select one of the sub-parts of the Sundarakāṇḍa chapter to see a full story.", bgImage: "https://placehold.co/1920x1080/282218/FCD34D?text=Kishkindhakanda" },
 "Sundarakāṇḍa (सुन्दरकाण्ड)": {
@@ -552,7 +552,7 @@ body.style.backgroundImage = `url("${partData.bgImage}")`;
 
 let formattedStory = "An error occurred while loading the story.";
 try {
-const response = await fetch(`json/sunderkand_part_${partKey.replace('Part ', '')}.json`);
+const response = await fetch(`sunderkand_part_${partKey.replace('Part ', '')}.json`);
 if (!response.ok) {
 throw new Error(`HTTP error! status: ${response.status}`);
 }
@@ -937,7 +937,8 @@ const sendMessage = async () => {
               'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-              user_message: userMessage
+              user_message: userMessage,
+              story_content: storyContent.textContent.trim()
           })
       });
 
@@ -1004,7 +1005,7 @@ const loadQuiz = async () => {
   quizResults.classList.add('hidden');
 
   try {
-    const response = await fetch('json/quiz.json');
+    const response = await fetch('quiz.json');
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
