@@ -12,3 +12,5 @@ langchain-community
 huggingface-hub
 gunicorn
 openai
+flask-cors
+
