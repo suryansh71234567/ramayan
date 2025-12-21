@@ -1,14 +1,15 @@
 import json
 import requests
 import os
-from langchain.docstore.document import Document
+from langchain_core.documents import Document
 from langchain_community.embeddings import HuggingFaceBgeEmbeddings
 from langchain_community.vectorstores import FAISS
-from langchain.chains import RetrievalQA
-from langchain.llms import Ollama
+
+from langchain_community.llms import Ollama
 from langchain_core.prompts import ChatPromptTemplate
 from dotenv import load_dotenv
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
+import torch
 
 
 # Load environment variables (e.g., API keys, though not needed for Ollama)
@@ -24,7 +25,7 @@ OLLAMA_API_URL = "http://localhost:11434"
 OLLAMA_MODEL = "llama3"
 
 # --- 2. Data Ingestion & Preprocessing ---
-def get_sunderkand_data(url: str, file_path: str, kanda: str) -> list:
+def get_ramayana_data(url: str, file_path: str, kanda: str = None) -> list:
     """
     Downloads the dataset if it doesn't exist and filters for the specified kanda.
     
@@ -55,28 +56,46 @@ def get_sunderkand_data(url: str, file_path: str, kanda: str) -> list:
         print("Dataset already exists. Reading from file...")
         with open(file_path, "r", encoding="utf-8") as f:
             data = json.load(f)
-
-    sunderkand_data = [item for item in data if item.get("kanda") == kanda]
-    print(f"Found {len(sunderkand_data)} shlokas in '{kanda}'.")
-    return sunderkand_data
+    if kanda:
+            filtered_data = [item for item in data if item.get("kanda") == kanda]
+            print(f"Found {len(filtered_data)} shlokas in '{kanda}'.")
+            return filtered_data
+    else:
+        print(f"No specific Kanda selected. Loading ALL {len(data)} shlokas from Ramayana.")
+        return data
 
 # --- 3. Indexing & Vector Store Creation ---
 def create_rag_vector_store(data: list, store_path: str, model_name: str) -> FAISS:
-    """
-    Creates and saves a FAISS vector database with citation-rich documents.
+    device = "cpu"
+    if torch.cuda.is_available():
+        device = "cuda"
+        print(f"✅ CUDA Detected. Running on GPU: {torch.cuda.get_device_name(0)}")
+    elif torch.backends.mps.is_available():
+        device = "mps" # Apple Silicon Metal Performance Shaders
+        print("✅ Apple MPS Detected. Running on Neural Engine/GPU.")
+    else:
+        print("⚠️ No GPU detected. Running on CPU (this will be slow for 24k docs).")
+
+    # 2. Configure Embedding Model with Batching
+    print(f"Initializing {model_name} on {device}...")
+    model_kwargs = {'device': device}
+    encode_kwargs = {
+        'normalize_embeddings': True, 
+        'batch_size': 64  # Process 64 docs at once. Lower this if you get OutOfMemory errors.
+    }
     
-    Args:
-        data (list): List of shloka dictionaries.
-        store_path (str): Path to save the vector store.
-        model_name (str): Name of the embedding model to use.
-        
-    Returns:
-        FAISS: The created and populated FAISS vector store.
-    """
+    embeddings = HuggingFaceBgeEmbeddings(
+        model_name=model_name,
+        model_kwargs=model_kwargs,
+        encode_kwargs=encode_kwargs
+    )
+
+    # 3. Check for existing index
     if os.path.exists(store_path):
         print(f"Vector store found at '{store_path}'. Loading...")
-        embeddings = HuggingFaceBgeEmbeddings(model_name=model_name)
         return FAISS.load_local(store_path, embeddings, allow_dangerous_deserialization=True)
+
+    print("\n--- Starting Full Ramayana Indexing ---")
 
     print("\n--- Starting RAG Indexing Pipeline ---")
     documents = []
@@ -86,11 +105,7 @@ def create_rag_vector_store(data: list, store_path: str, model_name: str) -> FAI
 
         # Combine all relevant text for rich context
         content = (
-            f"Kanda: {item['kanda']}\n"
-            f"Sarga: {item['sarga']}, Shloka: {item['shloka']}\n"
             f"Original: {item.get('shloka_text', 'N/A')}\n"
-            f"Transliteration: {item.get('transliteration', 'N/A')}\n"
-            f"Translation: {item.get('translation', 'N/A')}\n"
             f"Explanation: {item.get('explanation', 'N/A')}\n"
             f"Comments: {item.get('comments', 'N/A')}"
         )
@@ -120,8 +135,8 @@ def create_rag_vector_store(data: list, store_path: str, model_name: str) -> FAI
 
 # --- 4. RAG Chatbot with Citation ---
 import requests
-from langchain.prompts import ChatPromptTemplate
-from langchain.chains import RetrievalQA
+from langchain_core.prompts import ChatPromptTemplate
+
 
 def start_rag_chat(vectorstore, api_key: str, model: str = "deepseek/deepseek-chat"):
     """
@@ -189,7 +204,7 @@ def start_rag_chat(vectorstore, api_key: str, model: str = "deepseek/deepseek-ch
             for doc in docs:
                 print(f"- {doc.metadata.get('citation_id', 'N/A')}")
 
-def start_rag_chat1(vectorstore: FAISS, llm_model: str, api_url: str):
+'''def start_rag_chat1(vectorstore: FAISS, llm_model: str, api_url: str):
     """
     Starts an interactive chatbot session.
     
@@ -258,15 +273,24 @@ def start_rag_chat1(vectorstore: FAISS, llm_model: str, api_url: str):
                 print(f"- {citation_id}")
                 # Optional: Print the content for verification
                 # print(f"  Content: {doc.page_content[:100]}...")
-
-# --- 5. Main Execution Block ---
+'''
 if __name__ == "__main__":
-    sunderkand_data = get_sunderkand_data(DATASET_URL, DATA_FILE_PATH, KANDA_NAME)
-    if not sunderkand_data:
+    # Configuration for the full run
+    FULL_DATASET_URL = "<https://raw.githubusercontent.com/AshuVj/Valmiki_Ramayan_Dataset/refs/heads/main/data/Valmiki_Ramayan_Shlokas.json>"
+    LOCAL_FILE_PATH = os.path.join("data", "Valmiki_Ramayan_Shlokas.json")
+
+    # We change the folder name to distinguish it from the small test
+    FULL_VECTOR_STORE_PATH = "ramayana_full_faiss_index"
+
+    # Load ALL data (pass None for kanda)
+    ramayana_data = get_ramayana_data(FULL_DATASET_URL, LOCAL_FILE_PATH, kanda=None)
+
+    if not ramayana_data:
         print("Exiting pipeline due to data retrieval error.")
     else:
-        # Create or load the vector store
-        vector_store = create_rag_vector_store(sunderkand_data, VECTOR_STORE_PATH, EMBEDDING_MODEL_NAME)
-        
-        # Start the interactive chat session
-        #start_rag_chat(vector_store, OLLAMA_MODEL, OLLAMA_API_URL)
+        # Create or load the vector store with GPU acceleration
+        vector_store = create_rag_vector_store(
+            ramayana_data,
+            FULL_VECTOR_STORE_PATH,
+            EMBEDDING_MODEL_NAME
+        )
